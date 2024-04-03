@@ -1,0 +1,33 @@
+[
+    {
+        "firstName": "Default",
+        "lastName": "Advisor",
+        "password": "To be set to another as assigned",
+        "students": [],
+        "department": "",
+        "userId": "5581ca17-2ddf-4f52-a083-899869f4b5c0",
+        "email": "Not Real"
+    },
+    {
+        "firstName": "Billiam",
+        "lastName": "Beige",
+        "password": "something_cool",
+        "students": [
+            "3318e5f5-0667-4e05-9f14-463450dddc60"
+        ],
+        "department": "CS",
+        "userId": "970c31ab-02bb-4f2b-b8b6-8e8a206a506c",
+        "email": "billib@mailbox.sc.edu"
+    },
+    {
+        "firstName": "Osbert",
+        "lastName": "Odden",
+        "password": "ozzie0zz13",
+        "students": [
+            "3318e5f5-0667-4e05-9f14-463450dddc60"
+        ],
+        "department": "CIS",
+        "userId": "6c0b13b9-0f5f-4194-8279-fe9d56cce185",
+        "email": "osberto@email.sc.edu"
+    }
+]

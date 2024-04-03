@@ -1,0 +1,387 @@
+[
+    {
+        "lastName": "Beezers",
+        "advisorId": "970c31ab-02bb-4f2b-b8b6-8e8a206a506c",
+        "notes": [
+            "Student advised to take CSCE 145, ENGL 101, MATH 115, and MATH 111 this semester",
+            "Dropped MATH 115, replaced with MATH 111L"
+        ],
+        "hasScholarship": true,
+        "year": 2022,
+        "isHonors": true,
+        "userId": "3318e5f5-0667-4e05-9f14-463450dddc60",
+        "firstName": "Drew",
+        "password": "ep1c3l1t3",
+        "legalGuardians": [],
+        "major": "5ded2f1a-0d27-4b1e-8d70-cb779bc16bde",
+        "studentGrades": [
+            {
+                "grade": "B_PLUS",
+                "courseId": "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "12224407-e656-4fe7-9078-88f1d9dc8325"
+            },
+            {
+                "grade": "W",
+                "courseId": "84b21549-16e9-4117-978c-39a43fb665b2"
+            }
+        ],
+        "gpa": 3.4,
+        "semesterPlans": [
+            [
+                "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627",
+                "84b21549-16e9-4117-978c-39a43fb665b2",
+                "12224407-e656-4fe7-9078-88f1d9dc8325",
+                "669e88d5-9009-4f74-85aa-e675ffaaaf12"
+            ]
+        ],
+        "applicationID": 1,
+        "email": "dbeez@email.sc.edu"
+    },
+    {
+        "lastName": "West",
+        "advisorId": "970c31ab-02bb-4f2b-b8b6-8e8a206a506c",
+        "notes": [],
+        "hasScholarship": false,
+        "year": 2021,
+        "isHonors": false,
+        "userId": "0b186e4d-9891-4f52-be8a-413c850786ab",
+        "firstName": "Brax",
+        "password": "ma3w&zh3r3",
+        "legalGuardians": [],
+        "major": "5ded2f1a-0d27-4b1e-8d70-cb779bc16bde",
+        "studentGrades": [
+            {
+                "grade": "B_PLUS",
+                "courseId": "12224407-e656-4fe7-9078-88f1d9dc8325"
+            },
+            {
+                "grade": "A",
+                "courseId": "684f6d78-9f42-4e22-b447-7b15782007b3"
+            },
+            {
+                "grade": "A",
+                "courseId": "1cbec240-4022-42fa-8102-01beb9b8ab57"
+            },
+            {
+                "grade": "B",
+                "courseId": "3cca9c4e-a195-4759-a761-cfe09adb20b8"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "7100ca89-33cf-40da-acbe-84af49e92c3c"
+            },
+            {
+                "grade": "A",
+                "courseId": "789c6ed0-53e3-476c-8761-f08bf727d08c"
+            },
+            {
+                "grade": "B",
+                "courseId": "980e1056-4ed2-4459-b0e7-56d78eca5d73"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627"
+            },
+            {
+                "grade": "B",
+                "courseId": "1e45ee57-74aa-47f0-ae20-46d973457505"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "a379a182-57c9-4b28-950d-35903009bce3"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "f8b358bf-d69e-4aae-b10c-8dc98f1f651f"
+            },
+            {
+                "grade": "A",
+                "courseId": "3d7aa3f8-bfb0-4f9e-af57-49818eacf9a6"
+            },
+            {
+                "grade": "A",
+                "courseId": "5844e157-e966-4ca8-a60b-a86f76903c6d"
+            },
+            {
+                "grade": "A",
+                "courseId": "dd218911-2c00-46b4-99fc-0aa909331369"
+            },
+            {
+                "grade": "A",
+                "courseId": "3b493c23-93d7-40cc-9807-99d22ba943dd"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "96cd3d5d-590a-4567-9cc3-787e03cc5140"
+            },
+            {
+                "grade": "B",
+                "courseId": "66a95212-0d75-4fae-97ff-c3c76c29d47e"
+            },
+            {
+                "grade": "B",
+                "courseId": "9b9ea0d0-3574-44be-b6cf-1ef50ce2aa23"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "c85eb519-e97b-488b-ba02-2947764cfe92"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "730005f1-113d-446e-865c-31b46dfbc924"
+            },
+            {
+                "grade": "B",
+                "courseId": "6c8202fd-b31b-4647-b551-b7f4dbf007a0"
+            },
+            {
+                "grade": "A",
+                "courseId": "75764c82-d463-4fcf-a367-e7f925416456"
+            },
+            {
+                "grade": "A",
+                "courseId": "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6"
+            },
+            {
+                "grade": "C",
+                "courseId": "4bd274cb-260e-47a5-9893-203a3943d704"
+            },
+            {
+                "grade": "A",
+                "courseId": "d71f3a41-5b83-40b6-94a7-609b01ca2caa"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "b6bf4208-6933-4e10-a961-118f12d7acba"
+            },
+            {
+                "grade": "A",
+                "courseId": "928eb174-dea9-4b98-80b1-ac594c4360f8"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "39046cda-f913-4f9b-a002-f06e7c59f235"
+            }
+        ],
+        "gpa": 3.5,
+        "semesterPlans": [
+            [
+                "12224407-e656-4fe7-9078-88f1d9dc8325",
+                "4bd274cb-260e-47a5-9893-203a3943d704",
+                "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627",
+                "3cca9c4e-a195-4759-a761-cfe09adb20b8",
+                "5844e157-e966-4ca8-a60b-a86f76903c6d"
+            ],
+            [
+                "980e1056-4ed2-4459-b0e7-56d78eca5d73",
+                "3d7aa3f8-bfb0-4f9e-af57-49818eacf9a6",
+                "a379a182-57c9-4b28-950d-35903009bce3",
+                "b6bf4208-6933-4e10-a961-118f12d7acba",
+                "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6",
+                "9b9ea0d0-3574-44be-b6cf-1ef50ce2aa23"
+            ],
+            [
+                "789c6ed0-53e3-476c-8761-f08bf727d08c",
+                "39046cda-f913-4f9b-a002-f06e7c59f235",
+                "928eb174-dea9-4b98-80b1-ac594c4360f8",
+                "66a95212-0d75-4fae-97ff-c3c76c29d47e",
+                "75764c82-d463-4fcf-a367-e7f925416456",
+                "1e45ee57-74aa-47f0-ae20-46d973457505"
+            ],
+            [
+                "dd218911-2c00-46b4-99fc-0aa909331369",
+                "730005f1-113d-446e-865c-31b46dfbc924",
+                "f8b358bf-d69e-4aae-b10c-8dc98f1f651f",
+                "c85eb519-e97b-488b-ba02-2947764cfe92",
+                "1cbec240-4022-42fa-8102-01beb9b8ab57"
+            ],
+            [
+                "684f6d78-9f42-4e22-b447-7b15782007b3",
+                "d71f3a41-5b83-40b6-94a7-609b01ca2caa",
+                "6c8202fd-b31b-4647-b551-b7f4dbf007a0",
+                "96cd3d5d-590a-4567-9cc3-787e03cc5140",
+                "7100ca89-33cf-40da-acbe-84af49e92c3c",
+                "3b493c23-93d7-40cc-9807-99d22ba943dd"
+            ]
+        ],
+        "applicationID": 0,
+        "email": "bwest@email.sc.edu"
+    },
+    {
+        "lastName": "Hill",
+        "advisorId": "5581ca17-2ddf-4f52-a083-899869f4b5c0",
+        "notes": [],
+        "hasScholarship": false,
+        "year": 2021,
+        "isHonors": false,
+        "userId": "04018168-0e9a-4d65-961b-466e58e28c7d",
+        "firstName": "Tawnie",
+        "password": "tawnieth3t&",
+        "legalGuardians": [],
+        "major": "5ded2f1a-0d27-4b1e-8d70-cb779bc16bde",
+        "studentGrades": [
+            {
+                "grade": "A",
+                "courseId": "80b8803b-f963-4243-8f01-61c34c62b050"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "12224407-e656-4fe7-9078-88f1d9dc8325"
+            },
+            {
+                "grade": "A",
+                "courseId": "684f6d78-9f42-4e22-b447-7b15782007b3"
+            },
+            {
+                "grade": "A",
+                "courseId": "1cbec240-4022-42fa-8102-01beb9b8ab57"
+            },
+            {
+                "grade": "B",
+                "courseId": "3cca9c4e-a195-4759-a761-cfe09adb20b8"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "7100ca89-33cf-40da-acbe-84af49e92c3c"
+            },
+            {
+                "grade": "A",
+                "courseId": "789c6ed0-53e3-476c-8761-f08bf727d08c"
+            },
+            {
+                "grade": "B",
+                "courseId": "980e1056-4ed2-4459-b0e7-56d78eca5d73"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627"
+            },
+            {
+                "grade": "B",
+                "courseId": "1e45ee57-74aa-47f0-ae20-46d973457505"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "a379a182-57c9-4b28-950d-35903009bce3"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "f8b358bf-d69e-4aae-b10c-8dc98f1f651f"
+            },
+            {
+                "grade": "A",
+                "courseId": "3d7aa3f8-bfb0-4f9e-af57-49818eacf9a6"
+            },
+            {
+                "grade": "A",
+                "courseId": "5844e157-e966-4ca8-a60b-a86f76903c6d"
+            },
+            {
+                "grade": "A",
+                "courseId": "dd218911-2c00-46b4-99fc-0aa909331369"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "96cd3d5d-590a-4567-9cc3-787e03cc5140"
+            },
+            {
+                "grade": "B",
+                "courseId": "66a95212-0d75-4fae-97ff-c3c76c29d47e"
+            },
+            {
+                "grade": "B",
+                "courseId": "9b9ea0d0-3574-44be-b6cf-1ef50ce2aa23"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "c85eb519-e97b-488b-ba02-2947764cfe92"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "730005f1-113d-446e-865c-31b46dfbc924"
+            },
+            {
+                "grade": "B",
+                "courseId": "6c8202fd-b31b-4647-b551-b7f4dbf007a0"
+            },
+            {
+                "grade": "A",
+                "courseId": "75764c82-d463-4fcf-a367-e7f925416456"
+            },
+            {
+                "grade": "A",
+                "courseId": "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6"
+            },
+            {
+                "grade": "A",
+                "courseId": "29274077-e419-40d8-9212-d17d834326c3"
+            },
+            {
+                "grade": "CR",
+                "courseId": "4bd274cb-260e-47a5-9893-203a3943d704"
+            },
+            {
+                "grade": "A",
+                "courseId": "d71f3a41-5b83-40b6-94a7-609b01ca2caa"
+            },
+            {
+                "grade": "C_PLUS",
+                "courseId": "b6bf4208-6933-4e10-a961-118f12d7acba"
+            },
+            {
+                "grade": "A",
+                "courseId": "928eb174-dea9-4b98-80b1-ac594c4360f8"
+            },
+            {
+                "grade": "B_PLUS",
+                "courseId": "39046cda-f913-4f9b-a002-f06e7c59f235"
+            }
+        ],
+        "gpa": 3.5,
+        "semesterPlans": [
+            [
+                "12224407-e656-4fe7-9078-88f1d9dc8325",
+                "3d7aa3f8-bfb0-4f9e-af57-49818eacf9a6",
+                "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627",
+                "3cca9c4e-a195-4759-a761-cfe09adb20b8",
+                "5844e157-e966-4ca8-a60b-a86f76903c6d"
+            ],
+            [
+                "980e1056-4ed2-4459-b0e7-56d78eca5d73",
+                "928eb174-dea9-4b98-80b1-ac594c4360f8",
+                "a379a182-57c9-4b28-950d-35903009bce3",
+                "b6bf4208-6933-4e10-a961-118f12d7acba",
+                "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6",
+                "9b9ea0d0-3574-44be-b6cf-1ef50ce2aa23"
+            ],
+            [
+                "789c6ed0-53e3-476c-8761-f08bf727d08c",
+                "39046cda-f913-4f9b-a002-f06e7c59f235",
+                "f8b358bf-d69e-4aae-b10c-8dc98f1f651f",
+                "66a95212-0d75-4fae-97ff-c3c76c29d47e",
+                "75764c82-d463-4fcf-a367-e7f925416456",
+                "1e45ee57-74aa-47f0-ae20-46d973457505"
+            ],
+            [
+                "dd218911-2c00-46b4-99fc-0aa909331369",
+                "730005f1-113d-446e-865c-31b46dfbc924",
+                "80b8803b-f963-4243-8f01-61c34c62b050",
+                "c85eb519-e97b-488b-ba02-2947764cfe92",
+                "1cbec240-4022-42fa-8102-01beb9b8ab57"
+            ],
+            [
+                "684f6d78-9f42-4e22-b447-7b15782007b3",
+                "d71f3a41-5b83-40b6-94a7-609b01ca2caa",
+                "6c8202fd-b31b-4647-b551-b7f4dbf007a0",
+                "96cd3d5d-590a-4567-9cc3-787e03cc5140",
+                "7100ca89-33cf-40da-acbe-84af49e92c3c",
+                "29274077-e419-40d8-9212-d17d834326c3"
+            ]
+        ],
+        "applicationID": 0,
+        "email": "tahill@email.sc.edu"
+    }
+]
