@@ -2,6 +2,7 @@ module msjn {
     requires javafx.controls;
     requires javafx.fxml;
     requires json.simple;
+    requires javafx.graphics;
 
     opens msjn to javafx.fxml;
     exports msjn;
