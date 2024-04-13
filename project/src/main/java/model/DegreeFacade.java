@@ -15,14 +15,23 @@ public class DegreeFacade {
     private User user;
     private CourseList courseList;
     private MajorList majorList;
+    private static DegreeFacade degreeFacade;
 
     /**
      * An method to get every instance of a userList, courseList, and majorList
      */
-    public DegreeFacade() {
+    private DegreeFacade() {
         userList = UserList.getInstance();
         courseList = CourseList.getInstance();
         majorList = MajorList.getInstance();
+    }
+
+    public static DegreeFacade getInstance() {
+        if(degreeFacade == null) {
+            degreeFacade = new DegreeFacade();
+        }
+        return degreeFacade;            
+
     }
 
     /**

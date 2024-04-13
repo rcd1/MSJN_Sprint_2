@@ -14,7 +14,7 @@ public class ApplicationUI {
 
     public ApplicationUI() {
         scanner = new Scanner(System.in);
-        application = new DegreeFacade();
+        application = DegreeFacade.getInstance();
     }
 
     public void run() {

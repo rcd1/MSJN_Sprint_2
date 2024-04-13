@@ -16,7 +16,7 @@ public class WelcomeController implements Initializable {
 
     @FXML
     private void btnLoginClicked (MouseEvent event) throws IOException {
-        App.setRoot("login");
+        App.setRoot("loginscreen");
     }
 
     @Override
