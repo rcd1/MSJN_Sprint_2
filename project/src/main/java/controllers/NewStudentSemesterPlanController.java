@@ -39,6 +39,12 @@ public class NewStudentSemesterPlanController {
         titledPane.setText("Semester 1");
         semesterplansaccordion.getPanes().add(titledPane);
 
+        for(int i = 0; i < 7; i++) {
+            TitledPane titledPane1 = (TitledPane)loadFXML("newstudentsemesterplansemesterbutton").lookup("#semesterstub");
+            titledPane1.setText("Semester " + (i + 2));
+            semesterplansaccordion.getPanes().add(titledPane1);
+        }
+
         for(int i = 0; i < 5; i++) {
             Button button = (Button)loadFXML("newstudentsemesterplancoursebutton").lookup("#coursestub");
             Node anchorPane = titledPane.getContent();
