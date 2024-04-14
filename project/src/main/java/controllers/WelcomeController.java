@@ -11,7 +11,7 @@ public class WelcomeController implements Initializable {
 
     @FXML
     private void btnCreateAccountClicked(MouseEvent event) throws IOException {
-        App.setRoot("create account");
+        App.setRoot("signupscreen");
     }
 
     @FXML
