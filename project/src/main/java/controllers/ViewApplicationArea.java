@@ -13,5 +13,13 @@ import javafx.scene.text.Text;
 import msjn.App;
 
 public class ViewApplicationArea {
-    
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+
 }
