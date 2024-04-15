@@ -12,11 +12,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #c7c7c7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupScreenController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" styleClass="paperborderbackground" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupScreenController">
    <center>
       <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="325.0" prefWidth="337.0" scaleShape="false" spacing="10.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="BOTTOM_CENTER">
          <children>
-            <Label text="Create Account" textAlignment="CENTER">
+            <Label styleClass="accentheader" text="Create Account" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
@@ -36,7 +36,7 @@
             <TextField fx:id="emailfield" prefHeight="40.0" promptText="Email" />
             <PasswordField fx:id="passwordfield" prefHeight="40.0" promptText="Password" />
             <ChoiceBox fx:id="usertypebox" maxWidth="337.0" prefHeight="40.0" />
-            <Button mnemonicParsing="false" onMouseClicked="#loginButtonClicked" prefHeight="40.0" prefWidth="126.0" text="Sign Up" />
+            <Button mnemonicParsing="false" onMouseClicked="#loginButtonClicked" prefHeight="40.0" prefWidth="126.0" styleClass="accentbutton" text="Sign Up" />
             <Label fx:id="errorlabel" alignment="TOP_CENTER" prefHeight="55.0" prefWidth="277.0" textAlignment="CENTER" textFill="RED" wrapText="true" />
          </children>
          <padding>
@@ -45,15 +45,15 @@
       </VBox>
    </center>
    <top>
-      <Pane prefHeight="75.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="75.0" styleClass="paperborderbackground" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin></Pane>
    </top>
    <right>
-      <Pane BorderPane.alignment="CENTER" />
+      <Pane styleClass="paperborderbackground" BorderPane.alignment="CENTER" />
    </right>
    <left>
-      <Pane BorderPane.alignment="CENTER" />
+      <Pane styleClass="paperborderbackground" BorderPane.alignment="CENTER" />
    </left>
 </BorderPane>

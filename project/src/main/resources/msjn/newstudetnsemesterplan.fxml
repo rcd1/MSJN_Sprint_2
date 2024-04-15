@@ -74,7 +74,7 @@
          </padding></VBox>
    </center>
    <top>
-      <AnchorPane prefHeight="45.0" prefWidth="600.0" style="-fx-background-color: #c7c7c7;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="45.0" prefWidth="600.0" styleClass="accentheaderbackground" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="45.0" AnchorPane.leftAnchor="0.0">
                <children>

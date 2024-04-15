@@ -7,7 +7,40 @@ and
 </stylesheets>
 somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
 */    
-.root {
-    background-color: #9049ac;
-    -fx-background-color:#9049ac;
+.paperborderbackground {
+    background-color: #377F7F;
+    -fx-background-color: #377F7F;
 }
+
+.accentbutton {
+    background-color: #377F7F;
+    -fx-background-color: #377F7F;
+    -fx-text-fill: #fff;
+}
+
+.accentheader {
+    -fx-text-fill: #377F7F;
+    -fx-font-weight: bold;
+    font-weight: bold;
+}
+
+.menubar {
+    background-color: #377F7F;
+    -fx-background-color: #377F7F;
+    -fx-text-fill: #fff;
+}
+
+.menubar .label {
+    -fx-text-fill: #fff;
+}
+
+.menubar .button {
+    background-color: #fff;
+    -fx-background-color: #fff;
+    -fx-text-fill: #377F7F;
+    -fx-font-weight: bold;
+    font-weight: bold;
+
+
+}
+
