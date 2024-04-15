@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewStudentSemesterPlanController">
@@ -74,7 +73,7 @@
          </padding></VBox>
    </center>
    <top>
-      <AnchorPane prefHeight="45.0" prefWidth="600.0" styleClass="accentheaderbackground" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="45.0" prefWidth="600.0" styleClass="menubar" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="45.0" AnchorPane.leftAnchor="0.0">
                <children>
@@ -88,17 +87,17 @@
                   <Insets left="5.0" />
                </padding>
             </HBox>
-            <HBox alignment="CENTER_RIGHT" fillHeight="false" prefHeight="45.0" AnchorPane.rightAnchor="0.0">
+            <HBox alignment="CENTER_RIGHT" fillHeight="false" prefHeight="45.0" spacing="5.0" AnchorPane.rightAnchor="0.0">
                <padding>
                   <Insets right="5.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" text="Button">
+                  <Button mnemonicParsing="false" text="Back">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Circle fill="#c7c7c7" radius="15.0" stroke="#595959" strokeType="INSIDE" />
+                  <Button mnemonicParsing="false" text="Home" />
                </children>
             </HBox>
          </children>
