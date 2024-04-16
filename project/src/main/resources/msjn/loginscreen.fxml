@@ -9,8 +9,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import java.net.*?>    
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" styleClass="paperborderbackground" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginScreenController">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #377f7f;" styleClass="paperborderbackground" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginScreenController">
    <center>
       <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="325.0" prefWidth="337.0" scaleShape="false" spacing="10.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="BOTTOM_CENTER">
          <children>
@@ -46,4 +48,7 @@
    <left>
       <Pane styleClass="paperborderbackground" BorderPane.alignment="CENTER" />
    </left>
+   <stylesheets>
+   <URL value="@styles.css"/>
+   </stylesheets>
 </BorderPane>
