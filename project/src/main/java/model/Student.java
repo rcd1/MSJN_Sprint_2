@@ -16,7 +16,7 @@ public class Student extends User {
     private ArrayList<SemesterPlan> semesterPlans;
     private ArrayList<LegalGuardian> legalGuardians;
     private Advisor advisor;
-    private ArrayList<String> notes;
+    private ArrayList<Note> notes;
     private boolean isHonors;
     private boolean hasScholarship;
     private HashMap<Course, Grade> studentGrades;
@@ -45,7 +45,7 @@ public class Student extends User {
 
     public Student(String firstName, String lastName, String email, String password, UUID userID, Major major, int year,
             double gpa, ArrayList<SemesterPlan> semesterPlans, ArrayList<LegalGuardian> legalGuardians, Advisor advisor,
-            ArrayList<String> notes, boolean isHonors, boolean hasScholarship, HashMap<Course, Grade> studentGrades,
+            ArrayList<Note> notes, boolean isHonors, boolean hasScholarship, HashMap<Course, Grade> studentGrades,
             ApplicationID applicationID) {
         super(firstName, lastName, email, password, userID);
         this.major = major;
@@ -353,7 +353,7 @@ public class Student extends User {
         return advisor;
     }
 
-    public ArrayList<String> getNotes() {
+    public ArrayList<Note> getNotes() {
         return notes;
     }
 
@@ -402,7 +402,7 @@ public class Student extends User {
         System.out.println("Selected Application Area: " + applicationID.getName());
     }
 
-    public void addNote(String newNote) {
+    public void addNote(Note newNote) {
         notes.add(newNote);
     }
 }

@@ -37,7 +37,7 @@ public class DataLoader extends DataConstants {
                 ArrayList<LegalGuardian> legalGuardians = rebuildLegalGuardians(
                         (JSONArray) studentJSONObject.get(STUDENT_LEGAL_GUARDIANS));
                 Advisor advisor = rebuildAdvisor((String) studentJSONObject.get(STUDENT_ADVISOR));
-                ArrayList<String> notes = rebuildNotes((JSONArray) studentJSONObject.get(STUDENT_NOTES));
+                ArrayList<Note> notes = rebuildNotes((JSONArray) studentJSONObject.get(STUDENT_NOTES));
                 boolean isHonors = ((boolean) studentJSONObject.get(STUDENT_IS_HONORS));
                 boolean hasScholarship = ((boolean) studentJSONObject.get(STUDENT_HAS_SCHOLARSHIP));
                 HashMap<Course, Grade> studentGrades = rebuildStudentGrades(
@@ -81,10 +81,14 @@ public class DataLoader extends DataConstants {
      * @param jsonArray the array containing a list of Strings
      * @return a completed ArrayList<String>
      */
-    private static ArrayList<String> rebuildNotes(JSONArray jsonArray) {
-        ArrayList<String> notes = new ArrayList<>();
+    private static ArrayList<Note> rebuildNotes(JSONArray jsonArray) {
+        ArrayList<Note> notes = new ArrayList<>();
         for (int i = 0; i < jsonArray.size(); i++) {
-            notes.add((String) jsonArray.get(i));
+            JSONObject jsonNote = (JSONObject)jsonArray.get(i);
+            String title = (String)jsonNote.get(STUDENT_NOTES_TITLE);
+            String date = (String)jsonNote.get(STUDENT_NOTES_DATE);
+            String note = (String)jsonNote.get(STUDENT_NOTES_NOTE);
+            notes.add(new Note(title, date, note));
         }
         return notes;
     }

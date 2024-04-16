@@ -184,7 +184,7 @@ public class DegreeFacade {
         }      
     }
 
-    public void addNote(Student student, String newNote) {
-        student.addNote(newNote);
+    public void addNote(Student student, String title, String note) {
+        student.addNote(new Note(title, note));
     }
 }

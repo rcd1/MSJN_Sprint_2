@@ -200,10 +200,12 @@ public class ApplicationUI {
     }
 
     private void addStudentNote(Student selectedStudent) {
+        System.out.println("PLease enter the title of your note");
+        String newTitle = scanner.nextLine();
         System.out.println("Please enter your note to " + selectedStudent.getFirstName() + " "
                 + selectedStudent.getLastName());
         String newNote = scanner.nextLine();
-        application.addNote(selectedStudent, newNote);
+        application.addNote(selectedStudent, newTitle, newNote);
     }
 
     private int getAdvisorStudentIndex(Advisor advisor) {

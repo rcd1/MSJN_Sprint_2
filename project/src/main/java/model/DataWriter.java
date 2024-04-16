@@ -135,10 +135,14 @@ public class DataWriter extends DataConstants {
         return guardiansArray;
     }
 
-    private static JSONArray buildNotesJSON(ArrayList<String> notes) {
+    private static JSONArray buildNotesJSON(ArrayList<Note> notes) {
         JSONArray notesArray = new JSONArray();
-        for (String string : notes) {
-            notesArray.add(string);  
+        for (Note note : notes) {
+            JSONObject jsonNote = new JSONObject();
+            jsonNote.put(STUDENT_NOTES_TITLE, note.getTitle());
+            jsonNote.put(STUDENT_NOTES_DATE, note.getDate());
+            jsonNote.put(STUDENT_NOTES_NOTE, note.getNote());
+            notesArray.add(jsonNote);  
         }
         return notesArray;
     }
