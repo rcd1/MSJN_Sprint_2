@@ -86,6 +86,9 @@ public class NewStudentSemesterPlanController {
                         sb.append(currentCourse.getName());
                     }
                     Button button = getBlankCourse(sb.toString());
+
+                    addButtonEventListener(button, currentCourse);
+                    
                     addCourseToSemester(semester, button);
                 }
             }
@@ -151,8 +154,18 @@ public class NewStudentSemesterPlanController {
 
     }
 
+
     private void updateCoursePane(Course course) {
-        
+        courseNameLabel.setText(course.getShortName());
+    }
+
+    private void addButtonEventListener(Button button, Course course) {
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                updateCoursePane(course);
+            }
+        });
     }
 
 }
