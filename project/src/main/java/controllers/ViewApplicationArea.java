@@ -20,6 +20,6 @@ public class ViewApplicationArea {
     @FXML
     private URL location;
 
-    @FXML
+    //@FXML
 
 }
