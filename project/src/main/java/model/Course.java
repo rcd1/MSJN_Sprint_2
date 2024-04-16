@@ -231,6 +231,10 @@ public class Course {
         return name;
     }
 
+    public String getShortName() {
+        return designator.toString() + " " + number;
+    }
+
     /**
      * A setter for the course's name
      * @param name the name of course
