@@ -13,7 +13,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewStudentSemesterPlanController">
    <left>
-      <Accordion fx:id="semesterplansaccordion" prefWidth="200.0" style="-fx-background-color: #c7c7c7;" BorderPane.alignment="CENTER" />
+      <Accordion fx:id="semesterplansaccordion" prefWidth="202.0" style="-fx-background-color: #c7c7c7;" BorderPane.alignment="CENTER" />
    </left>
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">

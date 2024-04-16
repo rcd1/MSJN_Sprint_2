@@ -33,7 +33,31 @@ public class NewStudentSemesterPlanController {
     private Accordion semesterplansaccordion;
 
     @FXML
+    private Label courseCorequisitesLabel;
+
+    @FXML
+    private Label courseCreditHoursLabel;
+
+    @FXML
+    private Label courseDescriptionLabel;
+
+    @FXML
+    private Label courseFullNameLabel;
+
+    @FXML
+    private Label courseKeywordsLabel;
+
+    @FXML
     private Label courseNameLabel;
+
+    @FXML
+    private Label coursePrerequisitesLabel;
+
+    @FXML
+    private Label courseSemestersLabel;
+
+    @FXML
+    private Label courseStudentGradeLabel;
 
     @FXML
     void initialize() throws IOException {
@@ -125,6 +149,10 @@ public class NewStudentSemesterPlanController {
         int[] storeIndex = new int[1];
         ((VBox) vbox).getChildren().add(course);
 
+    }
+
+    private void updateCoursePane(Course course) {
+        
     }
 
 }
