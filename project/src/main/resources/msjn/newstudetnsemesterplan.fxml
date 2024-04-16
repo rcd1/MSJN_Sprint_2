@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import java.net.*?> 
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewStudentSemesterPlanController">
    <left>
@@ -103,4 +104,7 @@
          </children>
       </AnchorPane>
    </top>
+   <stylesheets>
+   <URL value="@styles.css"/>
+   </stylesheets>
 </BorderPane>
