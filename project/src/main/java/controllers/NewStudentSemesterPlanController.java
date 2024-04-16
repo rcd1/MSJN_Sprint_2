@@ -2,6 +2,7 @@ package controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
@@ -17,6 +18,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import model.*;
 
 
 public class NewStudentSemesterPlanController {
@@ -35,35 +37,65 @@ public class NewStudentSemesterPlanController {
 
     @FXML
     void initialize() throws IOException {
-        TitledPane titledPane = (TitledPane)loadFXML("newstudentsemesterplansemesterbutton").lookup("#semesterstub");
-        titledPane.setText("Semester 1");
-        semesterplansaccordion.getPanes().add(titledPane);
+        User currentUser = DegreeFacade.getInstance().getCurrentUser();
+        currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
 
-        for(int i = 0; i < 7; i++) {
-            TitledPane titledPane1 = (TitledPane)loadFXML("newstudentsemesterplansemesterbutton").lookup("#semesterstub");
-            titledPane1.setText("Semester " + (i + 2));
-            semesterplansaccordion.getPanes().add(titledPane1);
-        }
+        if(currentUser instanceof Student) {
+            ArrayList<SemesterPlan> semesterPlans = ((Student)currentUser).generateEightSemesterPlan();
+            if(semesterPlans != null) {
+                System.out.println("Semester plan received correctly");
+            }
 
-        for(int i = 0; i < 5; i++) {
-            Button button = (Button)loadFXML("newstudentsemesterplancoursebutton").lookup("#coursestub");
-            Node anchorPane = titledPane.getContent();
-        
-            Node vbox = ((AnchorPane) anchorPane).getChildren().get(0);
+            for(int i = 0; i < semesterPlans.size(); i++) {
+                TitledPane semester = getBlankSemester("Semester " + (i + 1));
+                semesterplansaccordion.getPanes().add(semester);
 
-            button.setText("Course" + (i + 1));
-
-            int[] storeIndex = new int[1];
-            storeIndex[0] = i;
-            button.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    courseNameLabel.setText("Semester " + (storeIndex[0] + 1));
+                ArrayList<Course> semesterCourses = semesterPlans.get(i).getCourses();
+                for(int j = 0; j < semesterCourses.size(); j++) {
+                    StringBuilder sb = new StringBuilder();
+                    Course currentCourse = semesterCourses.get(j);
+                    if(currentCourse.getDesignator() != Designator.FILL) {
+                        sb.append(currentCourse.getDesignator());
+                        sb.append(" ");
+                        sb.append(currentCourse.getNumber());
+                    } else {
+                        sb.append(currentCourse.getName());
+                    }
+                    Button button = getBlankCourse(sb.toString());
+                    addCourseToSemester(semester, button);
                 }
-            });
-            
-            ((VBox) vbox).getChildren().add(button);
+            }
+
+
+
+
         }
+
+        // TitledPane titledPane = getBlankSemester("Semester 1");
+        // semesterplansaccordion.getPanes().add(titledPane);
+
+        // for(int i = 0; i < 7; i++) {
+        //     TitledPane titledPane1 = getBlankSemester("Semester " + (i + 2));
+        //     semesterplansaccordion.getPanes().add(titledPane1);
+        // }
+
+        // for(int i = 0; i < 5; i++) {
+        //     Button button = getBlankCourse("Course" + (i + 1));
+        //     Node anchorPane = titledPane.getContent();
+        
+        //     Node vbox = ((AnchorPane) anchorPane).getChildren().get(0);
+
+        //     int[] storeIndex = new int[1];
+        //     storeIndex[0] = i;
+        //     button.setOnAction(new EventHandler<ActionEvent>() {
+        //         @Override
+        //         public void handle(ActionEvent event) {
+        //             courseNameLabel.setText("Semester " + (storeIndex[0] + 1));
+        //         }
+        //     });
+            
+        //     ((VBox) vbox).getChildren().add(button);
+        // }
 
 
 
@@ -73,6 +105,26 @@ public class NewStudentSemesterPlanController {
     private static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(msjn.App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
+    }
+
+    private TitledPane getBlankSemester(String text) throws IOException {
+        TitledPane titledPane = (TitledPane)loadFXML("newstudentsemesterplansemesterbutton").lookup("#semesterstub");
+        titledPane.setText(text);
+        return titledPane;
+    }
+
+    private Button getBlankCourse(String text) throws IOException {
+        Button button = (Button)loadFXML("newstudentsemesterplancoursebutton").lookup("#coursestub");
+        button.setText(text);
+        return button;
+    }
+
+    private void addCourseToSemester(TitledPane semester, Button course) {
+        Node anchorPane = semester.getContent();
+        Node vbox = ((AnchorPane) anchorPane).getChildren().get(0);
+        int[] storeIndex = new int[1];
+        ((VBox) vbox).getChildren().add(course);
+
     }
 
 }
