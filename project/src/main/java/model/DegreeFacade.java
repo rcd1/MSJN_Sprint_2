@@ -187,4 +187,8 @@ public class DegreeFacade {
     public void addNote(Student student, String newNote) {
         student.addNote(newNote);
     }
+
+    public User getCurrentUser() {
+        return user;
+    }
 }
