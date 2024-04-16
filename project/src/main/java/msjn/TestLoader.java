@@ -10,13 +10,13 @@ import java.io.IOException;
 /**
  * JavaFX App
  */
-public class App extends Application {
+public class TestLoader extends Application {
 
     private static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("welcome"), 600, 450);
+        scene = new Scene(loadFXML("newstudetnsemesterplan"), 600, 450);
         stage.setScene(scene);
         stage.show();
     }

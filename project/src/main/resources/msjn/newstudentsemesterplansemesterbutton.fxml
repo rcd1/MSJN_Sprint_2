@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<TitledPane id="semesterstub" fx:id="semesterstub" animated="false" text="Generic Semester" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <AnchorPane fx:id="anchorpanestub" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c7c7c7;">
+         <children>
+            <VBox fx:id="coursesetstub" prefWidth="202.0">
+               <padding>
+                  <Insets right="2.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewStudentSemesterPlanController">
+   <left>
+      <Accordion fx:id="semesterplansaccordion" style="-fx-background-color: #c7c7c7;" BorderPane.alignment="CENTER">
+         <panes>
+            <TitledPane id="semesterstub" fx:id="semesterstub" animated="false" text="No Courses">
+   <content>
+      <AnchorPane fx:id="anchorpanestub" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c7c7c7;">
+         <children>
+            <VBox fx:id="coursesetstub" prefWidth="202.0">
+               <padding>
+                  <Insets right="2.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>
+         </panes></Accordion>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="courseNameLabel" text="ARTE 101" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="courseFullNameLabel" text="Introduction to Art" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="-10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="courseDescriptionLabel" text="Introduction to art appreciation. Elements and principles of the visual arts, with examples from the history of art." wrapText="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="-3.0" />
+               </padding>
+            </Label>
+            <Label />
+            <Label fx:id="courseCreditHoursLabel" text="Credit Hours: 3" />
+            <Label fx:id="coursePrerequisitesLabel" text="Prerequisites: " />
+            <Label fx:id="courseCorequisitesLabel" text="Corequisites: " />
+            <Label fx:id="courseStudentGradeLabel" text="Student Grade: " />
+            <Label fx:id="courseKeywordsLabel" text="Keywords: " />
+            <Label fx:id="courseSemestersLabel" text="Semesters: " />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="5.0" />
+         </padding></VBox>
+   </center>
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="600.0" styleClass="menubar" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="45.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Label text="CourseWorks">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" fillHeight="false" prefHeight="45.0" spacing="5.0" AnchorPane.rightAnchor="0.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" text="Back">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Home" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

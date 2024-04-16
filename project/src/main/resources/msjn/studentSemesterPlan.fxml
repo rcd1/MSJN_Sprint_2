@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentSemesterPlanController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#377f7f" height="55.0" layoutX="-7.0" stroke="BLACK" strokeType="INSIDE" width="607.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CourseWorks">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <VBox layoutX="2.0" layoutY="55.0" prefHeight="345.0" prefWidth="180.0">
+         <children>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Semester 1">
+              <items>
+                <MenuItem mnemonicParsing="false" text="ENGL 101" />
+                <MenuItem mnemonicParsing="false" text="MATH 141" />
+                  <MenuItem mnemonicParsing="false" text="CSCE 145" />
+                  <MenuItem mnemonicParsing="false" text="CSCE 190" />
+                  <MenuItem mnemonicParsing="false" text="ARTE 101" />
+              </items>
+            </SplitMenuButton>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Semester 2">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ENGL102Clicked" text="ENGL 102" />
+                  <MenuItem mnemonicParsing="false" text="MATH 142" />
+                  <MenuItem mnemonicParsing="false" text="CHEM 111" />
+                  <MenuItem mnemonicParsing="false" text="CHEM 111L" />
+                  <MenuItem mnemonicParsing="false" text="CSCE 146" />
+                  <MenuItem mnemonicParsing="false" text="CSCE 215" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Semester 3">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Semester 4">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Semester 5">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Semester 6">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Application Area Elective" />
+                  <MenuItem mnemonicParsing="false" text="CSCE 416" />
+                  <MenuItem mnemonicParsing="false" text="CSCE Major Elective" />
+                  <MenuItem mnemonicParsing="false" text="Application Area Elective" />
+                  <MenuItem mnemonicParsing="false" text="STAT 509" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Semester 7">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Semester 8">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+         </children>
+      </VBox>
+      <ScrollBar layoutX="182.0" layoutY="55.0" orientation="VERTICAL" prefHeight="345.0" prefWidth="14.0" />
+      <Text layoutX="204.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENGL 102" wrappingWidth="389.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="204.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rhetoric and Composition" wrappingWidth="389.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="204.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instruction and intensive practice in researching, analyzing, and composing written arguments about academic and public issues." wrappingWidth="375.63671875" />
+      <Text layoutX="204.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Hours: 3                    Prerequisites: ENGL 101          Corequisites: None               Student Grade: A            Keywords: None                 Semesters: Spring, Summer, Fall" wrappingWidth="180.0" />
+   </children>
+</AnchorPane>
