@@ -12,13 +12,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import msjn.App;
 
-public class ViewApplicationArea {
+public class viewApplicationArea {
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
+   
 
 
 }

@@ -15,13 +15,18 @@ public abstract class DataConstants {
     protected static final String STUDENT_SEMESTER_PLANS = "semesterPlans";
     protected static final String STUDENT_LEGAL_GUARDIANS = "legalGuardians";
     protected static final String STUDENT_ADVISOR = "advisorId";
-    protected static final String STUDENT_NOTES = "notes";
     protected static final String STUDENT_IS_HONORS = "isHonors";
     protected static final String STUDENT_HAS_SCHOLARSHIP = "hasScholarship";
     protected static final String STUDENT_GRADES = "studentGrades";
     protected static final String STUDENT_APPLICATION_ID = "applicationID";
     protected static final String STUDENT_GRADES_COURSE_ID = "courseId";
     protected static final String STUDENT_GRADES_GRADE = "grade";
+    /*-------------------------Notes-------------------------*/
+    protected static final String STUDENT_NOTES = "notes";
+    protected static final String STUDENT_NOTES_TITLE = "title";
+    protected static final String STUDENT_NOTES_DATE = "date";
+    protected static final String STUDENT_NOTES_NOTE = "note";
+
     /*-------------------------Advisor-------------------------*/
     protected static final String ADVISORS_FILE_NAME = "project\\src\\main\\java\\data\\advisors.json";
     protected static final String ADVISOR_STUDENTS = "students";

@@ -21,6 +21,14 @@ somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
     -fx-text-fill: #fff;
 }
 
+.boldbutton {
+    -fx-font-size: 14px;
+    font-size: 14px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-pref-width: 200px;
+}
+
 .accentheader {
     -fx-text-fill: #377F7F;
     -fx-font-weight: bold;

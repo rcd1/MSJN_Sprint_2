@@ -1,5 +1,6 @@
 package controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import model.*;
+import msjn.App;
 
 public class LoginScreenController {
 
@@ -27,7 +29,7 @@ public class LoginScreenController {
     private Label errorlabel;
 
     @FXML
-    void loginButtonClicked(MouseEvent event) {
+    void loginButtonClicked(MouseEvent event) throws IOException{
         String username = emailfield.getText();
         String password = passwordfield.getText();
 
@@ -37,6 +39,7 @@ public class LoginScreenController {
             errorlabel.setText("Incorrect username or password");
         } else {
             errorlabel.setText("Success!");
+            App.setRoot("studentprofile");
         }
     }
 

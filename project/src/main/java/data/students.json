@@ -3,8 +3,16 @@
         "lastName": "Beezers",
         "advisorId": "970c31ab-02bb-4f2b-b8b6-8e8a206a506c",
         "notes": [
-            "Student advised to take CSCE 145, ENGL 101, MATH 115, and MATH 111 this semester",
-            "Dropped MATH 115, replaced with MATH 111L"
+            {
+                "title":"Semester 2 advisement",
+                "date":"11/15/2022",
+                "note":"Student advised to take CSCE 145, ENGL 101, MATH 115, and MATH 111 this semester"
+            },
+            {
+                "title":"Semester 2 Update",
+                "date":"03/08/2023",
+                "note":"Student advised to take CSCE 145, ENGL 101, MATH 115, and MATH 111 this semester"
+            }
         ],
         "hasScholarship": true,
         "year": 2022,
