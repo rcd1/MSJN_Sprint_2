@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -29,9 +30,9 @@
       </AnchorPane>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <RadioButton mnemonicParsing="false" text="Undeclared">
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" text="Undeclared">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
@@ -41,10 +42,13 @@
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton alignment="TOP_RIGHT" mnemonicParsing="false" text="Math">
+            <RadioButton alignment="TOP_RIGHT" layoutX="10.0" mnemonicParsing="false" text="Math">
                <font>
-                  <Font name="Times New Roman" size="18.0" />
+                  <Font name="Times New Roman Bold" size="18.0" />
                </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </RadioButton>
             <RadioButton mnemonicParsing="false" text="Digital Design">
                <font>
