@@ -17,7 +17,7 @@
    <left>
       <Accordion fx:id="semesterplansaccordion" style="-fx-background-color: #c7c7c7;" BorderPane.alignment="CENTER">
          <panes>
-            <TitledPane id="semesterstub" fx:id="semesterstub" animated="false" collapsible="false" expanded="false" text="Go">
+            <TitledPane id="semesterstub" fx:id="semesterstub" animated="false" collapsible="false" expanded="false">
                <content>
                   <AnchorPane fx:id="anchorpanestub" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c7c7c7;">
                      <children>
@@ -26,19 +26,68 @@
                               <Insets right="2.0" />
                            </padding>
                         </VBox>
-                        <Accordion layoutX="-2.0" prefHeight="51.0" prefWidth="204.0">
+                        <Accordion layoutX="-2.0" prefHeight="51.0" prefWidth="204.0" style="-fx-background-color: #377f7f;">
                           <panes>
-                            <TitledPane text="VSR" />
-                              <TitledPane text="AIU" />
-                            <TitledPane prefHeight="0.0" prefWidth="204.0" text="GSS" />
-                              <TitledPane text="CRW" />
-                              <TitledPane text="SCI" />
-                              <TitledPane text="ARP" />
-                              <TitledPane text="CMS" />
-                              <TitledPane text="GFL" />
-                              <TitledPane text="GHS" />
-                              <TitledPane text="LAE" />
-                              <TitledPane text="LSE" />
+                              <TitledPane style="-fx-background-color: #377f7f;" text="AIU" textFill="#377f7f">
+                                 <content>
+                                    <Accordion>
+                                      <panes>
+                                        <TitledPane animated="false" collapsible="false" expanded="false" text="AFAM 202">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                          </content>
+                                        </TitledPane>
+                                        <TitledPane animated="false" collapsible="false" expanded="false" text="ARTE 101">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                          </content>
+                                        </TitledPane>
+                                        <TitledPane animated="false" collapsible="false" expanded="false" text="ARTE 2603">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                          </content>
+                                        </TitledPane>
+                                          <TitledPane animated="false" collapsible="false" expanded="false" text="ARTH 105">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </TitledPane>
+                                          <TitledPane animated="false" collapsible="false" expanded="false" text="ARTH 106">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </TitledPane>
+                                          <TitledPane animated="false" collapsible="false" expanded="false" text="ARTS 103">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </TitledPane>
+                                          <TitledPane animated="false" collapsible="false" expanded="false" text="ARTS 104">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </TitledPane>
+                                          <TitledPane animated="false" collapsible="false" expanded="false" text="ARTS 210">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </TitledPane>
+                                      </panes>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Accordion>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane text="ARP" textFill="#377f7f" />
+                              <TitledPane text="CMS" textFill="#377f7f" />
+                              <TitledPane text="CRW" textFill="#377f7f" />
+                              <TitledPane text="GFL" textFill="#377f7f" />
+                              <TitledPane text="GHS" textFill="#377f7f" />
+                            <TitledPane prefHeight="0.0" prefWidth="204.0" text="GSS" textFill="#377f7f" />
+                              <TitledPane text="INF" textFill="#377f7f" />
+                              <TitledPane text="SCI" textFill="#377f7f" />
+                            <TitledPane text="VSR" textFill="#377f7f" />
                           </panes>
                         </Accordion>
                      </children>
