@@ -28,11 +28,11 @@
                         </VBox>
                         <Accordion layoutX="-2.0" prefHeight="51.0" prefWidth="204.0" style="-fx-background-color: #377f7f;">
                           <panes>
-                              <TitledPane style="-fx-background-color: #377f7f;" text="AIU" textFill="#377f7f">
+                              <TitledPane style="-fx-background-color: #377f7f;" text="AIU">
                                  <content>
                                     <Accordion>
                                       <panes>
-                                        <TitledPane animated="false" collapsible="false" expanded="false" text="AFAM 202">
+                                        <TitledPane animated="false" collapsible="false" expanded="false" text="AFAM 202" textFill="#377f7f">
                                           <content>
                                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                                           </content>
@@ -73,21 +73,18 @@
                                              </content>
                                           </TitledPane>
                                       </panes>
-                                       <opaqueInsets>
-                                          <Insets />
-                                       </opaqueInsets>
                                     </Accordion>
                                  </content>
                               </TitledPane>
-                              <TitledPane text="ARP" textFill="#377f7f" />
-                              <TitledPane text="CMS" textFill="#377f7f" />
-                              <TitledPane text="CRW" textFill="#377f7f" />
-                              <TitledPane text="GFL" textFill="#377f7f" />
-                              <TitledPane text="GHS" textFill="#377f7f" />
-                            <TitledPane prefHeight="0.0" prefWidth="204.0" text="GSS" textFill="#377f7f" />
-                              <TitledPane text="INF" textFill="#377f7f" />
-                              <TitledPane text="SCI" textFill="#377f7f" />
-                            <TitledPane text="VSR" textFill="#377f7f" />
+                              <TitledPane text="ARP" />
+                              <TitledPane text="CMS" />
+                              <TitledPane text="CRW" />
+                              <TitledPane text="GFL" />
+                              <TitledPane text="GHS" />
+                            <TitledPane prefHeight="0.0" prefWidth="204.0" text="GSS" />
+                              <TitledPane text="INF" />
+                              <TitledPane text="SCI" />
+                            <TitledPane text="VSR" />
                           </panes>
                         </Accordion>
                      </children>
