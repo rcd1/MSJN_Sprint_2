@@ -8,9 +8,8 @@ and
 somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
 */    
 
-.root{
-    background-color: #377F7F;
-}
+
+
 .paperborderbackground {
     background-color: #377F7F;
     -fx-background-color: #377F7F;
