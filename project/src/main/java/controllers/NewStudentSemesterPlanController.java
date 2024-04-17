@@ -79,9 +79,7 @@ public class NewStudentSemesterPlanController {
                     StringBuilder sb = new StringBuilder();
                     Course currentCourse = semesterCourses.get(j);
                     if(currentCourse.getDesignator() != Designator.FILL) {
-                        sb.append(currentCourse.getDesignator());
-                        sb.append(" ");
-                        sb.append(currentCourse.getNumber());
+                        sb.append(currentCourse.getShortName());
                     } else {
                         sb.append(currentCourse.getName());
                     }
