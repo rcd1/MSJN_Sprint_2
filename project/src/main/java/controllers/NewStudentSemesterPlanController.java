@@ -147,7 +147,6 @@ public class NewStudentSemesterPlanController {
     private void addCourseToSemester(TitledPane semester, Button course) {
         Node anchorPane = semester.getContent();
         Node vbox = ((AnchorPane) anchorPane).getChildren().get(0);
-        int[] storeIndex = new int[1];
         ((VBox) vbox).getChildren().add(course);
 
     }
