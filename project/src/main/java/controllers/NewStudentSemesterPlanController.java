@@ -165,14 +165,30 @@ public class NewStudentSemesterPlanController {
         if(prerequisites == null || prerequisites.isEmpty()) {
             coursePrerequisitesLabel.setText("Prerequisites: None");
         } else {
-            coursePrerequisitesLabel.setText("Prerequisites: TBA");
+            StringBuilder sb = new StringBuilder();
+            sb.append("Prerequisites: ");
+            for(int i = 0; i < prerequisites.size(); i++) {
+                sb.append(prerequisites.get(i).toString());
+                if(i != prerequisites.size() - 1) {
+                    sb.append(", ");
+                }
+            }
+            coursePrerequisitesLabel.setText(sb.toString());
         }
 
         ArrayList<RequirementSet> corequisites = course.getCorequisites();
         if(corequisites == null || corequisites.isEmpty()) {
             courseCorequisitesLabel.setText("Corequisites: None");
         } else {
-            courseCorequisitesLabel.setText("Corequisites: TBA");
+            StringBuilder sb = new StringBuilder();
+            sb.append("Corequisites: ");
+            for(int i = 0; i < corequisites.size(); i++) {
+                sb.append(corequisites.get(i).toString());
+                if(i != corequisites.size() - 1) {
+                    sb.append(", ");
+                }
+            }
+            courseCorequisitesLabel.setText(sb.toString());
         }
 
         Grade grade = ((Student)currentUser).satisfiesPrerequisite(course);
@@ -186,7 +202,15 @@ public class NewStudentSemesterPlanController {
         if(keywords == null || keywords.isEmpty()) {
             courseKeywordsLabel.setText("Keywords: None");
         } else {
-            courseKeywordsLabel.setText("Keywords: TBA");
+            StringBuilder sb = new StringBuilder();
+            sb.append("Keywords: ");
+            for(int i = 0; i < keywords.size(); i++) {
+                sb.append(keywords.get(i));
+                if(i != keywords.size() - 1) {
+                    sb.append(", ");
+                }
+            }
+            courseKeywordsLabel.setText(sb.toString());
         }
 
         ArrayList<SemesterOffered> semestersOffered =  course.getSemestersOffered();

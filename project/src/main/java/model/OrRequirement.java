@@ -33,4 +33,16 @@ public class OrRequirement extends RequirementSet {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < requiredCourses.size(); i++) {
+            sb.append(requiredCourses.get(i).getShortName());
+            if(i != requiredCourses.size() - 1) {
+                sb.append(", ");
+            }
+        }
+        return sb.toString();
+    }
 }
