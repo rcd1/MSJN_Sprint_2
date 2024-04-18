@@ -188,14 +188,14 @@ public class Student extends User {
     // This could be renamed to something like "getGrade"
     public Grade satisfiesPrerequisite(Course course) {
         Grade[] returnGrade = new Grade[1];
-        returnGrade[1] = null;
+        returnGrade[0] = null;
         studentGrades.forEach((key, value) -> {
             if (course.getCourseID().equals(key.getCourseID())) {
-                returnGrade[1] = value;
+                returnGrade[0] = value;
                 return;
             }
         });
-        return returnGrade[1];
+        return returnGrade[0];
     }
 
     /**
