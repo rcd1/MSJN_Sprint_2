@@ -155,4 +155,18 @@ public class UserList {
         System.out.println("UserList unable to find student with name " + firstName + " " + lastName);
         return null;
     }
+
+    public boolean userEmailExists(String email) {
+        for(Student student : students) {
+            if(student.getEmail().equals(email)) {
+                return true;
+            }
+        }
+        for(Advisor advisor : advisors) {
+            if(advisor.getEmail().equals(email)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -26,4 +26,8 @@ public enum UserType {
     public String getPhrase() {
         return phrase;
     }
+
+    public String toString() {
+        return phrase;
+    }
 }

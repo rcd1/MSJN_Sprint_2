@@ -191,4 +191,8 @@ public class DegreeFacade {
     public User getCurrentUser() {
         return user;
     }
+
+    public boolean userEmailExists(String email) {
+        return userList.userEmailExists(email);
+    }
 }
