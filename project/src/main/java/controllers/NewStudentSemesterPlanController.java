@@ -191,9 +191,17 @@ public class NewStudentSemesterPlanController {
 
         ArrayList<SemesterOffered> semestersOffered =  course.getSemestersOffered();
         if(semestersOffered == null || semestersOffered.isEmpty()) {
-            courseSemestersLabel.setText("Semesters Offered: None");
+            courseSemestersLabel.setText("Semesters: None");
         } else {
-            courseSemestersLabel.setText("Semesters Offered: TBA");
+            StringBuilder sb = new StringBuilder();
+            sb.append("Semesters: ");
+            for(int i = 0; i < semestersOffered.size(); i++) {
+                sb.append(semestersOffered.get(i).getName());
+                if(i != semestersOffered.size() - 1) {
+                    sb.append(", ");
+                }
+            }
+            courseSemestersLabel.setText(sb.toString());
         }
     }
 
