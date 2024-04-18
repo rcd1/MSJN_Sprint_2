@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #377f7f;" styleClass="paperborderbackground" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupScreenController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #377f7f;" styleClass="paperborderbackground" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupScreenController">
    <center>
-      <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="325.0" prefWidth="337.0" scaleShape="false" spacing="10.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="BOTTOM_CENTER">
+      <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="325.0" prefWidth="337.0" scaleShape="false" spacing="10.0" style="-fx-background-color: #FFFFFF;" styleClass="centerBox" stylesheets="@styles.css" BorderPane.alignment="BOTTOM_CENTER">
          <children>
             <Label styleClass="accentheader" text="Create Account" textAlignment="CENTER">
                <font>
