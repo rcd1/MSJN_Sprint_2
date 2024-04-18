@@ -91,7 +91,7 @@
                   </AnchorPane>
                </content>
                <graphic>
-                  <TextField text="Search" />
+                  <TextField prefHeight="25.0" prefWidth="182.0" text="Search" />
                </graphic>
             </TitledPane>
          </panes>
