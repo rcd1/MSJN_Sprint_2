@@ -60,7 +60,7 @@
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="32.0" prefWidth="117.0" text="Speech">
+            <RadioButton mnemonicParsing="false" prefHeight="32.0" prefWidth="121.0" text="Speech">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
