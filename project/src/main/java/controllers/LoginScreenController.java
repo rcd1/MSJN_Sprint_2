@@ -38,8 +38,12 @@ public class LoginScreenController {
         if(user == null) {
             errorlabel.setText("Incorrect username or password");
         } else {
-            errorlabel.setText("Success!");
-            App.setRoot("studentprofile");
+            if(user instanceof Student) {
+                App.setRoot("newstudetnsemesterplan");
+            } else if(user instanceof Advisor) {
+                errorlabel.setText("Not Implemented!");
+            }
+
         }
     }
 
