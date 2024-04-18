@@ -64,7 +64,7 @@ public class NewStudentSemesterPlanController {
     @FXML
     void initialize() throws IOException {
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
+        // currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
 
         if(currentUser instanceof Student) {
             ArrayList<SemesterPlan> semesterPlans = ((Student)currentUser).generateEightSemesterPlan();
