@@ -18,12 +18,12 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="courseNameLabel" text="ARTE 101" wrapText="true">
+            <Label fx:id="courseNameLabel" text="No Course Selected" wrapText="true">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="courseFullNameLabel" text="Introduction to Art" wrapText="true">
+            <Label fx:id="courseFullNameLabel" text="Open a semester and select a course" wrapText="true">
                <font>
                   <Font size="24.0" />
                </font>
@@ -34,7 +34,7 @@
                   <Insets top="-10.0" />
                </padding>
             </Label>
-            <Label fx:id="courseDescriptionLabel" text="Introduction to art appreciation. Elements and principles of the visual arts, with examples from the history of art." wrapText="true">
+            <Label fx:id="courseDescriptionLabel" wrapText="true">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -43,12 +43,12 @@
                </padding>
             </Label>
             <Label />
-            <Label fx:id="courseCreditHoursLabel" text="Credit Hours: 3" />
-            <Label fx:id="coursePrerequisitesLabel" text="Prerequisites: " />
-            <Label fx:id="courseCorequisitesLabel" text="Corequisites: " />
-            <Label fx:id="courseStudentGradeLabel" text="Student Grade: " />
-            <Label fx:id="courseKeywordsLabel" text="Keywords: " />
-            <Label fx:id="courseSemestersLabel" text="Semesters: " />
+            <Label fx:id="courseCreditHoursLabel" />
+            <Label fx:id="coursePrerequisitesLabel" />
+            <Label fx:id="courseCorequisitesLabel" />
+            <Label fx:id="courseStudentGradeLabel" />
+            <Label fx:id="courseKeywordsLabel" />
+            <Label fx:id="courseSemestersLabel" />
          </children>
          <BorderPane.margin>
             <Insets />

@@ -92,10 +92,8 @@ public class NewStudentSemesterPlanController {
                     addCourseToSemester(semester, button);
                 }
             }
-
-
-
-
+            
+            
         }
 
         // TitledPane titledPane = getBlankSemester("Semester 1");
