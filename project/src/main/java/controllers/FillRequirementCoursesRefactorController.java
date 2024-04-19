@@ -11,6 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.util.Callback;
 import model.*;
 import java.util.ArrayList;
@@ -56,9 +58,14 @@ public class FillRequirementCoursesRefactorController {
     @FXML
     private Button selectcoursebutton;
 
+    @FXML
+    private TextField searchfield;
+
     private Keyword searchKeyword;
 
     private User currentUser;
+
+    private ArrayList<Course> allAvailableCourses;
 
     @FXML
     void initialize() {
@@ -79,11 +86,11 @@ public class FillRequirementCoursesRefactorController {
         currentUser = DegreeFacade.getInstance().getCurrentUser();
         currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
 
-        ArrayList<Course> courses = CourseList.getInstance().findCourses(searchKeyword.toString());
+        allAvailableCourses = CourseList.getInstance().findCourses(searchKeyword.toString());
         if(currentUser != null) {
-            courses = ((Student)currentUser).filterAvailableCourses(courses);
+            allAvailableCourses = ((Student)currentUser).filterAvailableCourses(allAvailableCourses);
         }
-        ObservableList<Course> courseListCells = FXCollections.observableArrayList(courses);
+        ObservableList<Course> courseListCells = FXCollections.observableArrayList(allAvailableCourses);
         courselistview.setItems(courseListCells);
 
         courselistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Course>() {
@@ -107,9 +114,15 @@ public class FillRequirementCoursesRefactorController {
                 @Override
                 public void updateItem(Course course, boolean empty) {
                     super.updateItem(course, empty);
-                    if(course != null) {
-                        setText(course.getShortName());
+                    if(!empty) {
+                        if(course != null) {
+                            setText(course.getShortName());
+                        }
+                    } else {
+                        setGraphic(null);
+                        setText("");
                     }
+                
                 }
             };
             }
@@ -205,5 +218,26 @@ public class FillRequirementCoursesRefactorController {
             }
             courseSemestersLabel.setText(sb.toString());
         }
+    }
+
+    @FXML
+    private void searchcourses(KeyEvent event) {
+        ArrayList<Course> searchCourses = new ArrayList<Course>();
+        if(searchfield.getText().equals("")) {
+            searchCourses = allAvailableCourses;
+        } else {
+            for(Course course : allAvailableCourses) {
+                if(course.getShortName().contains(searchfield.getText())) {
+                    searchCourses.add(course);
+                }
+            }
+        }
+
+        ObservableList<Course> courseListCells = FXCollections.observableArrayList(searchCourses);
+        courselistview.setItems(courseListCells);
+    }
+
+    public void setSearchKeyword(Keyword keyword) {
+        this.searchKeyword = keyword;
     }
 }
