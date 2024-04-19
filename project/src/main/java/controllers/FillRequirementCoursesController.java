@@ -72,7 +72,7 @@ public class FillRequirementCoursesController {
         assert courselistvbox != null : "fx:id=\"courselistvbox\" was not injected: check your FXML file 'fillrequirementcourses.fxml'.";
         assert selectcoursebutton != null : "fx:id=\"selectcoursebutton\" was not injected: check your FXML file 'fillrequirementcourses.fxml'.";
 
-        searchKeyword = Keyword.AIU;
+        searchKeyword = Keyword.LAE;
 
         ArrayList<Course> courses = CourseList.getInstance().findCourses(searchKeyword.toString());
         for(Course course : courses) {

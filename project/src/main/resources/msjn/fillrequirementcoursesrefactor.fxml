@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FillRequirementCoursesRefactorController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="courseNameLabel" text="No Course Selected" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="courseFullNameLabel" text="To get started, select a course" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="-10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="courseDescriptionLabel" wrapText="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="-3.0" />
+               </padding>
+            </Label>
+            <Label />
+            <Label fx:id="courseCreditHoursLabel" />
+            <Label fx:id="coursePrerequisitesLabel" />
+            <Label fx:id="courseCorequisitesLabel" />
+            <Label fx:id="courseStudentGradeLabel" />
+            <Label fx:id="courseKeywordsLabel" />
+            <Label fx:id="courseSemestersLabel" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="5.0" />
+         </padding></VBox>
+   </center>
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="600.0" styleClass="menubar" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="45.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Label text="CourseWorks">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" fillHeight="false" prefHeight="45.0" spacing="5.0" AnchorPane.rightAnchor="0.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <children>
+                  <Button mnemonicParsing="false" text="Back">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Home" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <stylesheets>
+   <URL value="@styles.css" />
+   </stylesheets>
+   <left>
+      <GridPane prefWidth="202.0" style="-fx-background-color: #c7c7c7;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="selectcoursebutton" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidestickybutton" text="Select Course" GridPane.rowIndex="1" />
+            <ListView fx:id="courselistview" style="-fx-background-color: #c7c7c7;" />
+         </children>
+      </GridPane>
+   </left>
+</BorderPane>
