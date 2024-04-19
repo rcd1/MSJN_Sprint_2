@@ -67,6 +67,8 @@ public class FillRequirementCoursesRefactorController {
 
     private ArrayList<Course> allAvailableCourses;
 
+    private Course currentCourse;
+
     @FXML
     void initialize() {
         assert courseCorequisitesLabel != null : "fx:id=\"courseCorequisitesLabel\" was not injected: check your FXML file 'fillrequirementcoursesrefactor.fxml'.";
@@ -100,9 +102,11 @@ public class FillRequirementCoursesRefactorController {
                 if(newValue == null) {
                     selectcoursebutton.setDisable(true);
                     clearCourseDetails();
+                    currentCourse = null;
                 } else {
                     selectcoursebutton.setDisable(false);
                     updateCoursePane(newValue);
+                    currentCourse = newValue;
                 }
             }
         });
