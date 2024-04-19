@@ -77,9 +77,12 @@ public class FillRequirementCoursesRefactorController {
         searchKeyword = Keyword.LAE;
 
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        // currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
+        currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
 
         ArrayList<Course> courses = CourseList.getInstance().findCourses(searchKeyword.toString());
+        if(currentUser != null) {
+            courses = ((Student)currentUser).filterAvailableCourses(courses);
+        }
         ObservableList<Course> courseListCells = FXCollections.observableArrayList(courses);
         courselistview.setItems(courseListCells);
 

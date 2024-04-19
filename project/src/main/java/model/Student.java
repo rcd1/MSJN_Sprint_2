@@ -405,4 +405,14 @@ public class Student extends User {
     public void addNote(Note newNote) {
         notes.add(newNote);
     }
+
+    public ArrayList<Course> filterAvailableCourses(ArrayList<Course> availableCourses) {
+        ArrayList<Course> returnAvailableCourses = new ArrayList<Course>();
+        for(Course course : availableCourses) {
+            if(studentGrades.get(course) == null) {
+                returnAvailableCourses.add(course);
+            }
+        }
+        return returnAvailableCourses;
+    }
 }
