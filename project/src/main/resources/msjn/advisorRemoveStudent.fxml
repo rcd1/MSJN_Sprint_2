@@ -6,27 +6,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane disable="true" prefHeight="344.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="189.0" layoutY="145.0" promptText="First Name">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <TextField layoutX="189.0" layoutY="200.0" promptText="Last Name">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <Label layoutX="173.0" layoutY="66.0" text="Remove Students:">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-      <Button layoutX="222.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#btnRemoveStudentClicked" text="Remove Student">
+      <Button layoutX="112.0" layoutY="237.0" mnemonicParsing="false" onMouseClicked="#btnAddStudentClicked" text="Remove Student">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <Label layoutX="47.0" layoutY="53.0" text="Remove Students:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField layoutX="91.0" layoutY="119.0" prefHeight="39.0" prefWidth="194.0" promptText="First Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="91.0" layoutY="172.0" prefHeight="29.0" prefWidth="194.0" promptText="Last Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

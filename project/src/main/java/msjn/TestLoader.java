@@ -16,7 +16,7 @@ public class TestLoader extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("fillrequirementcoursesrefactor"), 600, 450);
+        scene = new Scene(loadFXML("advisorManageStudents"), 600, 450);
         stage.setScene(scene);
         stage.show();
     }
