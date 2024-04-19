@@ -104,11 +104,7 @@
             <Button fx:id="selectcoursebutton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidestickybutton" text="Select Course" GridPane.rowIndex="1" />
             <ScrollPane fitToHeight="true" fitToWidth="true">
                <content>
-                  <VBox fx:id="courselistvbox" style="-fx-background-color: #c7c7c7;">
-                     <children>
-                        <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
-                     </children>
-                  </VBox>
+                  <VBox fx:id="courselistvbox" style="-fx-background-color: #c7c7c7;" />
                </content>
             </ScrollPane>
          </children>
