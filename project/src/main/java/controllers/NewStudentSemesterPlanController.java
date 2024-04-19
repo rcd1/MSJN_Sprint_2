@@ -96,32 +96,6 @@ public class NewStudentSemesterPlanController {
             
         }
 
-        // TitledPane titledPane = getBlankSemester("Semester 1");
-        // semesterplansaccordion.getPanes().add(titledPane);
-
-        // for(int i = 0; i < 7; i++) {
-        //     TitledPane titledPane1 = getBlankSemester("Semester " + (i + 2));
-        //     semesterplansaccordion.getPanes().add(titledPane1);
-        // }
-
-        // for(int i = 0; i < 5; i++) {
-        //     Button button = getBlankCourse("Course" + (i + 1));
-        //     Node anchorPane = titledPane.getContent();
-        
-        //     Node vbox = ((AnchorPane) anchorPane).getChildren().get(0);
-
-        //     int[] storeIndex = new int[1];
-        //     storeIndex[0] = i;
-        //     button.setOnAction(new EventHandler<ActionEvent>() {
-        //         @Override
-        //         public void handle(ActionEvent event) {
-        //             courseNameLabel.setText("Semester " + (storeIndex[0] + 1));
-        //         }
-        //     });
-            
-        //     ((VBox) vbox).getChildren().add(button);
-        // }
-
 
 
 
@@ -189,9 +163,13 @@ public class NewStudentSemesterPlanController {
             courseCorequisitesLabel.setText(sb.toString());
         }
 
-        Grade grade = ((Student)currentUser).satisfiesPrerequisite(course);
-        if(grade != null) {
-            courseStudentGradeLabel.setText("Student Grade: " + grade.getLetter());
+        if(currentUser != null) {
+            Grade grade = ((Student)currentUser).satisfiesPrerequisite(course);
+            if(grade != null) {
+                courseStudentGradeLabel.setText("Student Grade: " + grade.getLetter());
+            } else {
+                courseStudentGradeLabel.setText("Student Grade: None");
+            }
         } else {
             courseStudentGradeLabel.setText("Student Grade: None");
         }
