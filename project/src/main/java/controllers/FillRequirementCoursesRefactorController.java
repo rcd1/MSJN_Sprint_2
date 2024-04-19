@@ -9,7 +9,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.util.Callback;
 import model.*;
 import java.util.ArrayList;
 
@@ -49,7 +51,7 @@ public class FillRequirementCoursesRefactorController {
     private Label courseStudentGradeLabel;
 
     @FXML
-    private ListView<String> courselistview;
+    private ListView<Course> courselistview;
 
     @FXML
     private Button selectcoursebutton;
@@ -73,17 +75,13 @@ public class FillRequirementCoursesRefactorController {
         searchKeyword = Keyword.LAE;
 
         ArrayList<Course> courses = CourseList.getInstance().findCourses(searchKeyword.toString());
-        ArrayList<String> courseNames = new ArrayList<String>();
-        for(Course course : courses) {
-            courseNames.add(course.getShortName());
-        }
-        ObservableList<String> courseNamesList = FXCollections.observableArrayList(courseNames);
-        courselistview.setItems(courseNamesList);
+        ObservableList<Course> courseListCells = FXCollections.observableArrayList(courses);
+        courselistview.setItems(courseListCells);
 
-        courselistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+        courselistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Course>() {
 
             @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+            public void changed(ObservableValue<? extends Course> observable, Course oldValue, Course newValue) {
                 if(newValue == null) {
                     selectcoursebutton.setDisable(true);
                 } else {
@@ -91,6 +89,20 @@ public class FillRequirementCoursesRefactorController {
                 }
             }
         });
-    }
 
+        courselistview.setCellFactory(new Callback<ListView<Course>, ListCell<Course>>() {
+            @Override
+            public ListCell<Course> call(ListView<Course> course) {
+            return new ListCell<>(){
+                @Override
+                public void updateItem(Course course, boolean empty) {
+                    super.updateItem(course, empty);
+                    if(course != null) {
+                        setText(course.getShortName());
+                    }
+                }
+            };
+            }
+        });
+    }
 }
