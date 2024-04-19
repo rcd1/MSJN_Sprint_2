@@ -10,6 +10,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import model.DegreeFacade;
+import model.UserType;
+import model.*;
 
 public class SignupScreenController {
 
@@ -35,13 +38,31 @@ public class SignupScreenController {
     private PasswordField passwordfield;
 
     @FXML
-    private ChoiceBox<String> usertypebox;
-
-    private String[] userTypes = {"Student", "Adivsor"};
+    private ChoiceBox<UserType> usertypebox;
 
     @FXML
     void loginButtonClicked(MouseEvent event) {
-        System.out.println(usertypebox.getValue());
+        String firstName = firstnamefield.getText();
+        String lastName = lastnamefield.getText();
+        String email = emailfield.getText();
+        String password = passwordfield.getText();
+        UserType userType = usertypebox.getValue();
+
+
+        if(usertypebox.getValue() == null) {
+            errorlabel.setText("Please choose a user type");
+            return;
+        } else if(DegreeFacade.getInstance().userEmailExists(email)) {
+            errorlabel.setText("Email already exists");
+            return;
+        }
+
+        User user = DegreeFacade.getInstance().createAccount(firstName, lastName, email, password, userType);
+        if(user == null) {
+            errorlabel.setText("There was an error creating an account");
+        } else {
+            errorlabel.setText("TBA!");
+        }
     }
 
     @FXML
@@ -52,8 +73,7 @@ public class SignupScreenController {
         assert lastnamefield != null : "fx:id=\"lastnamefield\" was not injected: check your FXML file 'signupscreen.fxml'.";
         assert passwordfield != null : "fx:id=\"passwordfield\" was not injected: check your FXML file 'signupscreen.fxml'.";
         assert usertypebox != null : "fx:id=\"usertypebox\" was not injected: check your FXML file 'signupscreen.fxml'.";
-        usertypebox.setItems(FXCollections.observableArrayList(userTypes));
-
+        usertypebox.setItems(FXCollections.observableArrayList(UserType.values()));
     }
 
 }

@@ -21,6 +21,16 @@ somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
     -fx-text-fill: #fff;
 }
 
+.sidestickybutton {
+    background-color: #377F7F;
+    -fx-background-color: #377F7F;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-font-size: 14px;
+    font-size: 14px;
+}
+
 .boldbutton {
     -fx-font-size: 14px;
     font-size: 14px;
@@ -51,8 +61,14 @@ somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
     -fx-text-fill: #377F7F;
     -fx-font-weight: bold;
     font-weight: bold;
-
-
 }
+/* .centerBox{
+    -fx-background-size: 1200 900;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-width:5;
+    -fx-border-color: #ffffff;
+} */
+
 
 
