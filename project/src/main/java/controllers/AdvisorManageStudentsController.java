@@ -32,12 +32,33 @@ public class AdvisorManageStudentsController implements Initializable {
     }
 
     private void handleTabSelection(Tab selectedTab) {
-        if (selectedTab == null) {
-            return;
-        }
+         if (selectedTab == null) {
+             return;
+             }
 
-        advisorAddStudent.setDisable(!selectedTab.getText().equals("Add"));
-        advisorViewStudent.setDisable(!selectedTab.getText().equals("View"));
-        advisorRemoveStudent.setDisable(!selectedTab.getText().equals("Remove"));
+        // if (advisorAddStudent != null) {
+        //     advisorAddStudent.setDisable(!selectedTab.getText().equals("Add"));
+        // }
+        // else{
+        //     System.err.println("Anchor pane is null");
+        // }
+
+        // if(advisorViewStudent != null) {
+        //     advisorViewStudent.setDisable(!selectedTab.getText().equals("View"));
+        // }
+        // else{
+        //     System.err.println("Anchor pane is null");
+        // }
+
+        // if(advisorRemoveStudent != null){
+        //     advisorRemoveStudent.setDisable(!selectedTab.getText().equals("Remove")); 
+        // }
+
+        // else{
+        //     System.err.println("Anchor Pane is null");
+        // }
+         advisorAddStudent.setDisable(!selectedTab.getText().equals("Add"));
+         advisorViewStudent.setDisable(!selectedTab.getText().equals("View"));
+         advisorRemoveStudent.setDisable(!selectedTab.getText().equals("Remove"));
     }
-}
+ }
