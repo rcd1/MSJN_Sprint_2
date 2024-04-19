@@ -101,7 +101,7 @@
           <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="NEVER" />
         </rowConstraints>
          <children>
-            <Button fx:id="selectcoursebutton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidestickybutton" text="Select Course" GridPane.rowIndex="1" />
+            <Button fx:id="selectcoursebutton" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="sidestickybutton" text="Select Course" GridPane.rowIndex="1" />
             <ScrollPane fitToHeight="true" fitToWidth="true">
                <content>
                   <VBox fx:id="courselistvbox" style="-fx-background-color: #c7c7c7;" />
