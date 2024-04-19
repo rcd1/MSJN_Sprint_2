@@ -227,7 +227,7 @@ public class FillRequirementCoursesRefactorController {
             searchCourses = allAvailableCourses;
         } else {
             for(Course course : allAvailableCourses) {
-                if(course.getShortName().contains(searchfield.getText())) {
+                if(course.getShortName().contains(searchfield.getText().toUpperCase())) {
                     searchCourses.add(course);
                 }
             }
