@@ -64,6 +64,12 @@ public class FillRequirementCoursesRefactorController {
     @FXML
     private TextField searchfield;
 
+    @FXML
+    private Button homebutton;
+
+    @FXML
+    private Button backbutton;
+
     private Keyword searchKeyword = Keyword.LAE;
 
     private User currentUser;
@@ -253,5 +259,15 @@ public class FillRequirementCoursesRefactorController {
             ((Student) currentUser).fillCourse(currentCourse);
             App.setRoot("newstudetnsemesterplan");
         }
+    }
+
+    @FXML
+    void backbuttonclicked(ActionEvent event) {
+
+    }
+
+    @FXML
+    void homebuttonclicked(ActionEvent event) throws IOException {
+        App.setRoot("studentProfile");
     }
 }

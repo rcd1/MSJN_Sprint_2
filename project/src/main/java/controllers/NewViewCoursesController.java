@@ -1,12 +1,15 @@
 package controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.beans.value.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
@@ -15,6 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Callback;
 import model.*;
+import msjn.*;
 import java.util.ArrayList;
 
 public class NewViewCoursesController {
@@ -58,6 +62,12 @@ public class NewViewCoursesController {
     @FXML
     private TextField searchfield;
 
+    @FXML
+    private Button homebutton;
+
+    @FXML
+    private Button backbutton;
+
     private Keyword searchKeyword = Keyword.LAE;
 
     private User currentUser;
@@ -65,6 +75,8 @@ public class NewViewCoursesController {
     private ArrayList<Course> allAvailableCourses;
 
     private Course currentCourse;
+
+    private Parent returnScreen;
 
     @FXML
     void initialize() {
@@ -233,5 +245,15 @@ public class NewViewCoursesController {
     public void setSearchKeyword(Keyword keyword) {
         this.searchKeyword = keyword;
         initialize();
+    }
+
+    @FXML
+    void backbuttonclicked(ActionEvent event) {
+
+    }
+
+    @FXML
+    void homebuttonclicked(ActionEvent event) throws IOException {
+        App.setRoot("studentProfile");
     }
 }

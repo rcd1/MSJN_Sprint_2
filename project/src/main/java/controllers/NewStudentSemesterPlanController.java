@@ -61,6 +61,9 @@ public class NewStudentSemesterPlanController {
     @FXML
     private Label courseStudentGradeLabel;
 
+    @FXML
+    private Button homebutton;
+
     private User currentUser;
 
     @FXML
@@ -228,6 +231,11 @@ public class NewStudentSemesterPlanController {
                 }
             }
         });
-    }    
+    }   
+
+    @FXML
+    void homebuttonclicked(ActionEvent event) throws IOException {
+        App.setRoot("studentProfile");
+    }
 
 }
