@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paperborderbackground" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.advisorNotePopUpController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="paperborderbackground" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdvisorNoteController">
    <top>
       <AnchorPane prefHeight="71.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="lblText" layoutX="224.0" layoutY="22.0" text="Leave A Note">
+            <Label fx:id="lblText" layoutX="224.0" layoutY="22.0" text="Leave A Note" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="24.0" />
                </font></Label>

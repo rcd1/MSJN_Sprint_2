@@ -11,11 +11,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ListCell;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.util.Callback;
 import model.*;
 import java.util.ArrayList;
 
 public class StudentViewNotes {
+
+    public static StudentViewNotes instance;
 
     @FXML
     private ResourceBundle resources;
@@ -25,6 +28,9 @@ public class StudentViewNotes {
 
     @FXML
     private Label noteDateLabel;
+
+    @FXML
+    private TextFlow noteTextFlow;
 
     @FXML
     private Text noteText;
@@ -37,7 +43,7 @@ public class StudentViewNotes {
 
     private User currentUser;
 
-    private Student currentStudent;
+    private Student currentStudent = null;
 
     private ArrayList<Note> currentStudentNotes;
 
@@ -66,6 +72,7 @@ public class StudentViewNotes {
             @Override
             public void changed(ObservableValue<? extends Note> observable, Note oldValue, Note newValue) {
                 if (newValue == null) {
+                    
                     clearNoteDetails();
                     currentNote = null;
                 } else {

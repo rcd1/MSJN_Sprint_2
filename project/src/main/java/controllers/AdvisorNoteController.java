@@ -10,10 +10,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import model.*;
 import msjn.App;
+import msjn.TestLoader;
 
 public class AdvisorNoteController {
 
-    private Student studentToReceiveNote;
     private static AdvisorNoteController instance;
 
     @FXML
@@ -40,6 +40,24 @@ public class AdvisorNoteController {
     @FXML
     private TextField titleText;
 
+    private User currentUser = null;
+
+    private Student studentToReceiveNote = null;
+
+    @FXML
+    void initialize(){
+        assert lblText != null : "fx:id=\"lblText\" was not injected: check your FXML file 'advisorNotePopUp.fxml'.";
+        assert noteText != null : "fx:id=\"noteText\" was not injected: check your FXML file 'advisorNotePopUp.fxml'.";
+        assert sendButton != null
+                : "fx:id=\"sendButton\" was not injected: check your FXML file 'advisorNotePopUp.fxml'.";
+        assert titleText != null
+                : "fx:id=\"titleText\" was not injected: check your FXML file 'advisorNotePopUp.fxml'.";
+        instance = this;
+        currentUser = DegreeFacade.getInstance().getCurrentUser();
+        currentUser = DegreeFacade.getInstance().login("dbeez@email.sc.edu", "ep1c3l1t3");
+        studentToReceiveNote = (Student) currentUser;
+    }
+
     @FXML
     void sendNote() {
         if (titleText.getText().trim().isBlank()) {
@@ -53,8 +71,8 @@ public class AdvisorNoteController {
             return;
         }
         System.out.println(titleText.getText() + ": " + noteText.getText());
-        // studentToReceiveNote.addNote(new Note(titleText.getText(),noteText.getText()));
-        errorLbl.setText("Nice Work!");
+        studentToReceiveNote.addNote(new Note(titleText.getText(),noteText.getText()));
+        //errorLbl.setText("Nice Work!");
         errorLbl.setVisible(false);
         return;
 
@@ -65,18 +83,11 @@ public class AdvisorNoteController {
         App.setRoot("advisorManageStudents");
     }
 
-    @FXML
-    void initialize() {
-        assert lblText != null : "fx:id=\"lblText\" was not injected: check your FXML file 'advisorNotePopUp.fxml'.";
-        assert noteText != null : "fx:id=\"noteText\" was not injected: check your FXML file 'advisorNotePopUp.fxml'.";
-        assert sendButton != null
-                : "fx:id=\"sendButton\" was not injected: check your FXML file 'advisorNotePopUp.fxml'.";
-        assert titleText != null
-                : "fx:id=\"titleText\" was not injected: check your FXML file 'advisorNotePopUp.fxml'.";
-        instance = this;
-    }
-
-    public static void prepSetStudent(Student student) {
+    /**
+     * A Method for other controllers to pass a Student to this controller, so that the notes are saved to the student
+     * @param student the Student the Advisor wants to send a Note
+     */
+    public static void setCurrentStudent(Student student) {
         instance.setStudent(student);
     }
 
