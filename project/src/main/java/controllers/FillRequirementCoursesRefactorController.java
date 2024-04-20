@@ -61,7 +61,7 @@ public class FillRequirementCoursesRefactorController {
     @FXML
     private TextField searchfield;
 
-    private Keyword searchKeyword;
+    private Keyword searchKeyword = Keyword.LAE;
 
     private User currentUser;
 
@@ -82,8 +82,6 @@ public class FillRequirementCoursesRefactorController {
         assert courseStudentGradeLabel != null : "fx:id=\"courseStudentGradeLabel\" was not injected: check your FXML file 'fillrequirementcoursesrefactor.fxml'.";
         assert courselistview != null : "fx:id=\"courselistview\" was not injected: check your FXML file 'fillrequirementcoursesrefactor.fxml'.";
         assert selectcoursebutton != null : "fx:id=\"selectcoursebutton\" was not injected: check your FXML file 'fillrequirementcoursesrefactor.fxml'.";
-
-        searchKeyword = Keyword.LAE;
 
         currentUser = DegreeFacade.getInstance().getCurrentUser();
         currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
@@ -243,5 +241,6 @@ public class FillRequirementCoursesRefactorController {
 
     public void setSearchKeyword(Keyword keyword) {
         this.searchKeyword = keyword;
+        initialize();
     }
 }

@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,6 +20,7 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import model.*;
+import msjn.*;
 
 
 public class NewStudentSemesterPlanController {
@@ -64,7 +66,7 @@ public class NewStudentSemesterPlanController {
     @FXML
     void initialize() throws IOException {
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        // currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
+        currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
 
         if(currentUser instanceof Student) {
             ArrayList<SemesterPlan> semesterPlans = ((Student)currentUser).generateEightSemesterPlan();
@@ -205,13 +207,25 @@ public class NewStudentSemesterPlanController {
         }
     }
 
-    private void addButtonEventListener(Button button, Course course) {
+    private void addButtonEventListener(Button button, Course course){
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                updateCoursePane(course);
+                if(course.getDesignator() == Designator.FILL) {
+                    try {
+                        FXMLLoader loader =  new FXMLLoader(msjn.App.class.getResource("fillrequirementcoursesrefactor" + ".fxml"));
+                        Parent parent = (Parent)loader.load();
+                        FillRequirementCoursesRefactorController controller = loader.getController();
+                        controller.setSearchKeyword(course.getKeywords().get(0));
+                        App.setRoot(parent);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    updateCoursePane(course);
+                }
             }
         });
-    }
+    }    
 
 }
