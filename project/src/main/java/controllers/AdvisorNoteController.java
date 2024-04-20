@@ -11,10 +11,10 @@ import javafx.scene.control.TextField;
 import model.*;
 import msjn.App;
 
-public class advisorNotePopUpController {
+public class AdvisorNoteController {
 
     private Student studentToReceiveNote;
-    private static advisorNotePopUpController instance;
+    private static AdvisorNoteController instance;
 
     @FXML
     private ResourceBundle resources;
