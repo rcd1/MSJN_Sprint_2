@@ -24,6 +24,16 @@ public class CourseList {
         return courses;
     }
 
+    public ArrayList<Course> getCoursesNoFiller() {
+        ArrayList<Course> returnCourses = new ArrayList<Course>();
+        for(Course course : courses) {
+            if(course.getDesignator() != Designator.FILL) {
+                returnCourses.add(course);
+            }
+        }
+        return returnCourses;
+    }
+
     public Course getCourse(String name, String number, int hours) {
         for (Course course : courses) {
             if (!course.getDesignator().equals(Designator.FILL) && course.checkCourse(name, number, hours))
