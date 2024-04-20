@@ -212,14 +212,16 @@ public class NewStudentSemesterPlanController {
             @Override
             public void handle(ActionEvent event) {
                 if(course.getDesignator() == Designator.FILL) {
-                    try {
-                        FXMLLoader loader =  new FXMLLoader(msjn.App.class.getResource("fillrequirementcoursesrefactor" + ".fxml"));
-                        Parent parent = (Parent)loader.load();
-                        FillRequirementCoursesRefactorController controller = loader.getController();
-                        controller.setSearchKeyword(course.getKeywords().get(0));
-                        App.setRoot(parent);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    if(!(course.getKeywords().get(0) == Keyword.AP0 && ((Student) currentUser).getApplicationID() == ApplicationID.UNDECLARED)) {
+                        try {
+                            FXMLLoader loader =  new FXMLLoader(msjn.App.class.getResource("fillrequirementcoursesrefactor" + ".fxml"));
+                            Parent parent = (Parent)loader.load();
+                            FillRequirementCoursesRefactorController controller = loader.getController();
+                            controller.setSearchKeyword(course.getKeywords().get(0));
+                            App.setRoot(parent);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 } else {
                     updateCoursePane(course);
