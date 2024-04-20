@@ -50,7 +50,7 @@
                   <Insets />
                </VBox.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="119.0" text="Digital Design">
+            <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="130.0" text="Digital Design">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
