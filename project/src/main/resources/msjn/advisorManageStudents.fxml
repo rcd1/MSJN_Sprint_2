@@ -34,7 +34,7 @@
       </Text>
       <TabPane fx:id="tabPane" layoutY="56.0" prefHeight="344.0" prefWidth="228.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Add">
+          <Tab fx:id="addStudentTab" text="Add">
             <content>
               <AnchorPane fx:id="advisorAddStudent" minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="394.0">
                         <VBox prefHeight="317.0" prefWidth="228.0">
@@ -54,7 +54,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="View">
+          <Tab fx:id="viewStudentTab" text="View">
             <content>
               <AnchorPane fx:id="advisorViewStudent" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -89,7 +89,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab text="Remove">
+            <Tab fx:id="removeStudentTab" text="Remove">
                <content>
                   <AnchorPane fx:id="advisorRemoveStudent" minHeight="0.0" minWidth="0.0" prefHeight="273.0" prefWidth="209.0">
                      <children>
@@ -113,6 +113,6 @@
             </Tab>
         </tabs>
       </TabPane>
-      <AnchorPane disable="true" layoutX="225.0" layoutY="56.0" prefHeight="344.0" prefWidth="378.0" />
+      <AnchorPane fx:id="rightSideAnchorPane" disable="true" layoutX="225.0" layoutY="56.0" prefHeight="344.0" prefWidth="378.0" />
    </children>
 </AnchorPane>
