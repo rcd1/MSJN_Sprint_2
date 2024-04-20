@@ -1,11 +1,13 @@
 package controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.beans.value.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -15,6 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Callback;
 import model.*;
+import msjn.*;
 import java.util.ArrayList;
 
 public class FillRequirementCoursesRefactorController {
@@ -242,5 +245,13 @@ public class FillRequirementCoursesRefactorController {
     public void setSearchKeyword(Keyword keyword) {
         this.searchKeyword = keyword;
         initialize();
+    }
+
+    @FXML
+    void selectCourseButtonClicked(ActionEvent event) throws IOException {
+        if(currentCourse != null) {
+            ((Student) currentUser).fillCourse(currentCourse);
+            App.setRoot("newstudetnsemesterplan");
+        }
     }
 }
