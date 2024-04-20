@@ -70,5 +70,17 @@ somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
     -fx-border-color: #ffffff;
 } */
 
+.errorLabel {
+    -fx-text-fill: red;
+}
+
+.greenButton {
+    -fx-background-color: #377F7F;
+    -fx-text-fill: white;
+    -fx-font-family: Arial;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
 
 
