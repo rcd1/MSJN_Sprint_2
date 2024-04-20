@@ -26,7 +26,7 @@
             <Insets />
          </BorderPane.margin>
          <children>
-            <Button mnemonicParsing="false" onMouseClicked="#goToSemesterPlans" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Semester Plan" GridPane.halignment="CENTER" />
+            <Button mnemonicParsing="false" onMouseClicked="#goToSemesterPlans" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Semester Plans" GridPane.halignment="CENTER" />
             <Button mnemonicParsing="false" onMouseClicked="#goToViewCourses" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Courses" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Button mnemonicParsing="false" onMouseClicked="#goToViewNotes" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Notes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <GridPane.margin>
