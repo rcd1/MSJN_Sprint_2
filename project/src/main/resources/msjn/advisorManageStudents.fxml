@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
@@ -32,8 +36,7 @@
         <tabs>
           <Tab text="Add">
             <content>
-              <AnchorPane fx:id ="advisorAddStudent" minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="394.0">
-                     <children>
+              <AnchorPane fx:id="advisorAddStudent" minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="394.0">
                         <VBox prefHeight="317.0" prefWidth="228.0">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Brax West" wrappingWidth="227.859375">
@@ -48,7 +51,6 @@
                               </Text>
                            </children>
                         </VBox>
-                     </children>
                   </AnchorPane>
             </content>
           </Tab>
@@ -56,6 +58,19 @@
             <content>
               <AnchorPane fx:id="advisorViewStudent" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
+                        <GridPane prefHeight="69.0" prefWidth="202.0" style="-fx-background-color: #c7c7c7;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                           <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="ALWAYS" />
+                            <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+                            <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="NEVER" />
+                          </rowConstraints>
+                           <children>
+                              <ListView prefHeight="23.0" prefWidth="138.0" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
                         <VBox prefHeight="317.0" prefWidth="274.0">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Brax West" wrappingWidth="229.359375">
@@ -76,7 +91,7 @@
           </Tab>
             <Tab text="Remove">
                <content>
-                  <AnchorPane fx:id= "advisorRemoveStudent" minHeight="0.0" minWidth="0.0" prefHeight="273.0" prefWidth="209.0">
+                  <AnchorPane fx:id="advisorRemoveStudent" minHeight="0.0" minWidth="0.0" prefHeight="273.0" prefWidth="209.0">
                      <children>
                         <VBox prefHeight="318.0" prefWidth="228.0">
                            <children>
