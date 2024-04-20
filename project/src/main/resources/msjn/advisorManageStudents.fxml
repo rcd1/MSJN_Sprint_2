@@ -58,20 +58,20 @@
             <content>
               <AnchorPane fx:id="advisorViewStudent" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <GridPane prefHeight="69.0" prefWidth="202.0" style="-fx-background-color: #c7c7c7;">
+                        <GridPane prefHeight="321.0" prefWidth="228.0" style="-fx-background-color: #c7c7c7;">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                           <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="ALWAYS" />
-                            <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
-                            <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="NEVER" />
+                           <RowConstraints maxHeight="87.0" minHeight="26.0" prefHeight="38.0" vgrow="ALWAYS" />
+                            <RowConstraints maxHeight="260.0" minHeight="0.0" prefHeight="0.0" vgrow="ALWAYS" />
+                            <RowConstraints maxHeight="283.0" minHeight="35.0" prefHeight="283.0" vgrow="NEVER" />
                           </rowConstraints>
                            <children>
                               <ListView prefHeight="23.0" prefWidth="138.0" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
-                        <VBox prefHeight="317.0" prefWidth="274.0">
+                        <VBox prefHeight="317.0" prefWidth="228.0">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Brax West" wrappingWidth="229.359375">
                                  <font>
@@ -113,6 +113,6 @@
             </Tab>
         </tabs>
       </TabPane>
-      <AnchorPane disable="true" layoutX="228.0" layoutY="56.0" prefHeight="344.0" prefWidth="375.0" />
+      <AnchorPane disable="true" layoutX="225.0" layoutY="56.0" prefHeight="344.0" prefWidth="378.0" />
    </children>
 </AnchorPane>
