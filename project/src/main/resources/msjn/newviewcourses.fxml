@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FillRequirementCoursesRefactorController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewViewCoursesController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -100,10 +100,8 @@
         <rowConstraints>
             <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="ALWAYS" />
           <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
-          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="NEVER" />
         </rowConstraints>
          <children>
-            <Button fx:id="selectcoursebutton" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#selectCourseButtonClicked" styleClass="sidestickybutton" text="Select Course" GridPane.rowIndex="2" />
             <ListView fx:id="courselistview" style="-fx-background-color: #c7c7c7;" GridPane.rowIndex="1" />
             <TextField fx:id="searchfield" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyTyped="#searchcourses" promptText="Search" />
          </children>

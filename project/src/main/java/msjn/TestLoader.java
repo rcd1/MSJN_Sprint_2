@@ -16,13 +16,21 @@ public class TestLoader extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("fillrequirementcoursesrefactor"), 600, 450);
+<<<<<<< HEAD
+        scene = new Scene(loadFXML("fillRequirementCoures"), 600, 450);
+=======
+        scene = new Scene(loadFXML("newstudetnsemesterplan"), 600, 450);
+>>>>>>> 445fadff2d59d1ab7ca567017b513219d323333d
         stage.setScene(scene);
         stage.show();
     }
 
     public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
+    }
+
+    public static void setRoot(Parent setParent) {
+        scene.setRoot(setParent);
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

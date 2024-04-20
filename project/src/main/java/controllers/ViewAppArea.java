@@ -12,7 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import msjn.App;
 
-public class viewApplicationArea {
+ public class ViewAppArea {
 
    
 

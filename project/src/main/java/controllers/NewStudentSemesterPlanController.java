@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,6 +20,7 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import model.*;
+import msjn.*;
 
 
 public class NewStudentSemesterPlanController {
@@ -64,7 +66,7 @@ public class NewStudentSemesterPlanController {
     @FXML
     void initialize() throws IOException {
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        // currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
+        currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
 
         if(currentUser instanceof Student) {
             ArrayList<SemesterPlan> semesterPlans = ((Student)currentUser).generateEightSemesterPlan();
@@ -95,32 +97,6 @@ public class NewStudentSemesterPlanController {
             
             
         }
-
-        // TitledPane titledPane = getBlankSemester("Semester 1");
-        // semesterplansaccordion.getPanes().add(titledPane);
-
-        // for(int i = 0; i < 7; i++) {
-        //     TitledPane titledPane1 = getBlankSemester("Semester " + (i + 2));
-        //     semesterplansaccordion.getPanes().add(titledPane1);
-        // }
-
-        // for(int i = 0; i < 5; i++) {
-        //     Button button = getBlankCourse("Course" + (i + 1));
-        //     Node anchorPane = titledPane.getContent();
-        
-        //     Node vbox = ((AnchorPane) anchorPane).getChildren().get(0);
-
-        //     int[] storeIndex = new int[1];
-        //     storeIndex[0] = i;
-        //     button.setOnAction(new EventHandler<ActionEvent>() {
-        //         @Override
-        //         public void handle(ActionEvent event) {
-        //             courseNameLabel.setText("Semester " + (storeIndex[0] + 1));
-        //         }
-        //     });
-            
-        //     ((VBox) vbox).getChildren().add(button);
-        // }
 
 
 
@@ -189,9 +165,13 @@ public class NewStudentSemesterPlanController {
             courseCorequisitesLabel.setText(sb.toString());
         }
 
-        Grade grade = ((Student)currentUser).satisfiesPrerequisite(course);
-        if(grade != null) {
-            courseStudentGradeLabel.setText("Student Grade: " + grade.getLetter());
+        if(currentUser != null) {
+            Grade grade = ((Student)currentUser).satisfiesPrerequisite(course);
+            if(grade != null) {
+                courseStudentGradeLabel.setText("Student Grade: " + grade.getLetter());
+            } else {
+                courseStudentGradeLabel.setText("Student Grade: None");
+            }
         } else {
             courseStudentGradeLabel.setText("Student Grade: None");
         }
@@ -227,13 +207,27 @@ public class NewStudentSemesterPlanController {
         }
     }
 
-    private void addButtonEventListener(Button button, Course course) {
+    private void addButtonEventListener(Button button, Course course){
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                updateCoursePane(course);
+                if(course.getDesignator() == Designator.FILL) {
+                    if(!(course.getKeywords().get(0) == Keyword.AP0 && ((Student) currentUser).getApplicationID() == ApplicationID.UNDECLARED)) {
+                        try {
+                            FXMLLoader loader =  new FXMLLoader(msjn.App.class.getResource("fillrequirementcoursesrefactor" + ".fxml"));
+                            Parent parent = (Parent)loader.load();
+                            FillRequirementCoursesRefactorController controller = loader.getController();
+                            controller.setSearchKeyword(course.getKeywords().get(0));
+                            App.setRoot(parent);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                } else {
+                    updateCoursePane(course);
+                }
             }
         });
-    }
+    }    
 
 }
