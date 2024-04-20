@@ -211,7 +211,7 @@ public class NewStudentSemesterPlanController {
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if(course.getDesignator() == Designator.FILL) {
+                if(course.getDesignator() == Designator.FILL) { //TODO handle application area on fill requirement side
                     if(!(course.getKeywords().get(0) == Keyword.AP0 && ((Student) currentUser).getApplicationID() == ApplicationID.UNDECLARED)) {
                         try {
                             FXMLLoader loader =  new FXMLLoader(msjn.App.class.getResource("fillrequirementcoursesrefactor" + ".fxml"));
