@@ -1,9 +1,11 @@
 package controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -32,12 +34,30 @@ public class AdvisorManageStudentsController implements Initializable {
     }
 
     private void handleTabSelection(Tab selectedTab) {
-         if (selectedTab == null) {
-             return;
-            }
-            
-         advisorAddStudent.setDisable(!selectedTab.getText().equals("Add"));
-         advisorViewStudent.setDisable(!selectedTab.getText().equals("View"));
-         advisorRemoveStudent.setDisable(!selectedTab.getText().equals("Remove"));
+        if (selectedTab == null) {
+            return;
+        }
+    
+        String fxmlFileName = "";
+        if (selectedTab.getText().equals("Add")) {
+            fxmlFileName = "advisorAddStudent.fxml";
+        } else if (selectedTab.getText().equals("View")) {
+            fxmlFileName = "advisorViewStudent.fxml";
+        } else if (selectedTab.getText().equals("Remove")) {
+            fxmlFileName = "advisorRemoveStudent.fxml";
+        }
+    
+        loadFXMLIntoAnchorPane(fxmlFileName);
+    }
+
+    private void loadFXMLIntoAnchorPane(String fxmlFileName) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(msjn.App.class.getResource(fxmlFileName + ".fxml"));
+            AnchorPane root = fxmlLoader.load();
+            advisorAddStudent.getChildren().setAll(root);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error loading FXML file: " + fxmlFileName);
+        }
     }
  }
