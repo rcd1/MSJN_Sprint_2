@@ -46,7 +46,7 @@ public class App extends Application {
     public static void main(String[] args) {
         //DegreeFacade.getInstance().login("dbeez@email.sc.edu", "ep1c3l1t3");
         launch();
-        DegreeFacade.getInstance().logout();
+        // DegreeFacade.getInstance().logout();
     }
 
 }
