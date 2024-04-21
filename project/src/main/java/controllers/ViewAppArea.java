@@ -80,7 +80,7 @@ import msjn.*;
 
     
     @FXML 
-    void setToScience (MouseEvent event) {
+    void setToScience (ActionEvent event) {
         if(student != null) {
             student.setApplicationID(ApplicationID.SCIENCE);
         }
