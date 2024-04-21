@@ -9,12 +9,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentProfileController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewAppArea">
    
    <bottom>
       <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #377F7F;" text="Back" textFill="WHITE" />
+            <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#homebuttonclicked" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #377F7F;" text="Back" textFill="WHITE" />
          </children>
       </AnchorPane>
    </bottom>
@@ -32,17 +32,17 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Undeclared">
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#setToUndeclared" prefHeight="31.0" prefWidth="178.0" text="Undeclared">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Science" textAlignment="RIGHT">
+            <RadioButton mnemonicParsing="false" onMouseClicked="#setToScience" prefHeight="31.0" prefWidth="178.0" text="Science" textAlignment="RIGHT">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton alignment="CENTER_LEFT" layoutX="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Math">
+            <RadioButton alignment="CENTER_LEFT" layoutX="10.0" mnemonicParsing="false" onAction="#setToMath" prefHeight="31.0" prefWidth="179.0" text="Math">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
@@ -50,17 +50,17 @@
                   <Insets />
                </VBox.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Digital Design">
+            <RadioButton mnemonicParsing="false" onAction="#setToDigitalDesign" prefHeight="31.0" prefWidth="179.0" text="Digital Design">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Robot">
+            <RadioButton mnemonicParsing="false" onAction="#setToRobotics" prefHeight="31.0" prefWidth="179.0" text="Robot">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Speech">
+            <RadioButton mnemonicParsing="false" onAction="#setToSpeech" prefHeight="31.0" prefWidth="178.0" text="Speech">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>

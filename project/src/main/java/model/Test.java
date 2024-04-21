@@ -6,13 +6,13 @@ import java.util.Date;
 
 public class Test {
     public static void main(String[] args) {
-        UserList users = UserList.getInstance();
-        ArrayList<Student> students = users.getStudents();
-         for (Student student : students) {
-             for (Note note : student.getNotes()) {
-                 System.out.println(note.toString());
-             }
-         }
-        //new ApplicationUI().run();
+         UserList users = UserList.getInstance();
+         ArrayList<Student> students = users.getStudents();
+          for (Student student : students) {
+              for (Note note : student.getNotes()) {
+                  System.out.println(note.toString());
+              }
+          }
+        // new ApplicationUI().run();
     }
 }
