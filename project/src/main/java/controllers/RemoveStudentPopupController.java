@@ -3,6 +3,8 @@ package controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -24,10 +26,9 @@ public class RemoveStudentPopupController {
     @FXML
     private TextField lastNameField;
 
-    @FXML
-    void keytyped(KeyEvent event) {
+    private Button applyButton;
 
-    }
+    private String returnFirstName, returnLastName;
 
     @FXML
     void initialize() {
@@ -35,6 +36,29 @@ public class RemoveStudentPopupController {
         assert firstNameField != null : "fx:id=\"firstNameField\" was not injected: check your FXML file 'Untitled'.";
         assert lastNameField != null : "fx:id=\"lastNameField\" was not injected: check your FXML file 'Untitled'.";
 
+        applyButton = ((Button) dialogPane.lookupButton(ButtonType.APPLY));
+        applyButton.setText("Remove");
+        applyButton.setDisable(true);
+
+    }
+
+    @FXML
+    void keytyped(KeyEvent event) {
+        if(!firstNameField.getText().equals("") && !lastNameField.getText().equals("")) {
+            applyButton.setDisable(false);
+        } else {
+            applyButton.setDisable(true);
+        }
+        returnFirstName = firstNameField.getText();
+        returnLastName = lastNameField.getText();
+    }
+
+    public String getFirstName() {
+        return returnFirstName;
+    }
+
+    public String getLastName() {
+        return returnLastName;
     }
 
 }
