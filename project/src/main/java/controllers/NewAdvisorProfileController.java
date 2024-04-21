@@ -136,6 +136,8 @@ public class NewAdvisorProfileController {
         assert studentStartLabel != null : "fx:id=\"studentStartLabel\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert viewProfileButton != null : "fx:id=\"viewProfileButton\" was not injected: check your FXML file 'newviewcourses.fxml'.";
 
+        clearStudentDetails();
+
         currentUser = DegreeFacade.getInstance().getCurrentUser();
         currentUser = DegreeFacade.getInstance().login("osberto@email.sc.edu","ozzie0zz13");
 
@@ -149,9 +151,9 @@ public class NewAdvisorProfileController {
                 @Override
                 public void changed(ObservableValue<? extends Student> observable, Student oldValue, Student newValue) {
                     if(newValue == null) {
-                        // Do stuff
+                        clearStudentDetails();
                     } else {
-                        // Do stuff
+                        updateStudentPane(newValue);
                     }
                 }
             });
@@ -180,4 +182,26 @@ public class NewAdvisorProfileController {
 
     }
 
+    private void clearStudentDetails() {
+        studentNameLabel.setText("No Student Selected");
+        studentMajorLabel.setText("");
+        studentApplicationAreaLabel.setText("");
+        studentStartLabel.setText("");
+        studentGPALabel.setText("");
+        studentHonorsLabel.setText("");
+        viewProfileButton.setVisible(false);
+    }
+
+    private void updateStudentPane(Student student) {
+        studentNameLabel.setText(student.getFirstName() + " " + student.getLastName());
+        studentMajorLabel.setText("Major: " + student.getMajor().getMajorName());
+        studentApplicationAreaLabel.setText("Application Area: " + student.getApplicationID().getName());
+        studentStartLabel.setText("Start: TBA");
+        studentGPALabel.setText("GPA: " + student.getGpa());
+
+        String honors = student.getHonors() ? "Yes" : "No";
+        studentHonorsLabel.setText("Honors: " + honors);
+
+        viewProfileButton.setVisible(true);
+    }
 }
