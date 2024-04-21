@@ -97,7 +97,7 @@
               </rowConstraints>
                <children>
                   <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addbuttonclicked" text="Add" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#viewbuttonclicked" text="View" GridPane.columnIndex="1" />
+                  <Button disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#viewbuttonclicked" text="View" GridPane.columnIndex="1" />
                   <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#removebuttonclicked" text="Remove" GridPane.columnIndex="2" />
                </children>
             </GridPane>
