@@ -25,13 +25,18 @@ public class LeaveNotePopupController {
     @FXML
     private TextArea noteField;
 
+    @FXML
+    private TextField noteTitleField;
+
     private String note;
+
+    private String noteTitle;
 
     private Button applyButton;
 
     @FXML
     void keytyped(KeyEvent event) {
-        if(!noteField.getText().equals("")) {
+        if(!(noteField.getText().equals("") && noteTitleField.getText().equals(""))) {
             applyButton.setDisable(false);
         } else {
             applyButton.setDisable(true);
@@ -39,6 +44,7 @@ public class LeaveNotePopupController {
         if(noteField.getText().contains("\n"))
         noteField.setText(noteField.getText().replace("\n",""));
         note = noteField.getText();
+        noteTitle = noteTitleField.getText();
     }
 
     @FXML
@@ -60,6 +66,10 @@ public class LeaveNotePopupController {
 
     public String getNote() {
         return note;
+    }
+
+    public String getNoteTitle() {
+        return noteTitle;
     }
 
 }

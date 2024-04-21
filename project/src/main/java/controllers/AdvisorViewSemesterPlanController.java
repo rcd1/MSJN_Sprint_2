@@ -78,7 +78,8 @@ public class AdvisorViewSemesterPlanController {
     }
 
     @FXML
-    void homebuttonclicked(ActionEvent event) {
+    void homebuttonclicked(ActionEvent event) throws IOException {
+        App.setRoot("newAdvisorProfile");
 
     }
 
@@ -90,6 +91,10 @@ public class AdvisorViewSemesterPlanController {
         LeaveNotePopupController controller = fxmlLoader.getController();
         dialog.setTitle("Leave Note");
         ButtonType clickedButton = dialog.showAndWait().get();
+
+        if(clickedButton == ButtonType.APPLY) {
+            targetStudent.addNote(new Note(controller.getNoteTitle(), controller.getNote()));
+        }
     }
 
     @FXML
@@ -248,7 +253,7 @@ public class AdvisorViewSemesterPlanController {
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if(course.getDesignator() == Designator.FILL) { //TODO handle application area on fill requirement side
+                if(course.getDesignator() == Designator.FILL) { 
                     
                 } else {
                     updateCoursePane(course);
