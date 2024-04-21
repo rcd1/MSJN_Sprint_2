@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -169,7 +170,18 @@ public class NewAdvisorProfileController {
     }
 
     @FXML
-    void viewbuttonclicked(ActionEvent event) {
+    void viewbuttonclicked(ActionEvent event) throws IOException {
+        Student targetStudent = studentlistview.getSelectionModel().getSelectedItem();
+        if(targetStudent != null) {
+            FXMLLoader loader = new FXMLLoader(msjn.App.class.getResource("advisorviewsemesterplan.fxml"));
+            Parent parent = (Parent)loader.load();
+            AdvisorViewSemesterPlanController controller = loader.getController();
+            controller.setTargetStudent(targetStudent);
+            controller.initialize();
+            App.setRoot(parent);
+        } else {
+            System.out.println("Student is null");
+        }
 
     }
 

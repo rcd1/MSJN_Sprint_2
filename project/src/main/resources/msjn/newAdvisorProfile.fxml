@@ -30,7 +30,7 @@
             <Label fx:id="studentStartLabel" text="Start: Fall 2021" />
             <Label fx:id="studentGPALabel" text="GPA: 4.0" />
             <Label fx:id="studentHonorsLabel" text="Honors: No" />
-            <Button fx:id="viewProfileButton" mnemonicParsing="false" text="View Student Profile" />
+            <Button fx:id="viewProfileButton" mnemonicParsing="false" onAction="#viewbuttonclicked" text="View Student Profile" />
          </children>
          <BorderPane.margin>
             <Insets />
