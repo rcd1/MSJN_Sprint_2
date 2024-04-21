@@ -32,17 +32,17 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="121.0" text="Undeclared">
+            <RadioButton contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Undeclared">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" text="Science" textAlignment="RIGHT">
+            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Science" textAlignment="RIGHT">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton alignment="CENTER_LEFT" layoutX="10.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="120.0" text="Math">
+            <RadioButton alignment="CENTER_LEFT" layoutX="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Math">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
@@ -50,17 +50,17 @@
                   <Insets />
                </VBox.margin>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="34.0" prefWidth="130.0" text="Digital Design">
+            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Digital Design">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="24.0" prefWidth="120.0" text="Robot">
+            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Robot">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="32.0" prefWidth="121.0" text="Speech">
+            <RadioButton mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Speech">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
