@@ -17,7 +17,7 @@
    <bottom>
       <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#homebuttonclicked" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #377F7F;" text="Back" textFill="WHITE" visible="false" />
+            <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#homeButtonClicked" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #377F7F;" text="Back" textFill="WHITE" visible="false" />
          </children>
       </AnchorPane>
    </bottom>
@@ -29,17 +29,17 @@
                   <Font name="System Bold" size="26.0" />
                </font>
             </Text>
-            <RadioButton fx:id="undeclaredRadioButton" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#setToUndeclared" prefHeight="31.0" prefWidth="178.0" text="Undeclared">
+            <RadioButton fx:id="undeclaredRadioButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Undeclared">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="scienceRadioButton" mnemonicParsing="false" onMouseClicked="#setToScience" prefHeight="31.0" prefWidth="178.0" text="Science">
+            <RadioButton fx:id="scienceRadioButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Science">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="mathRadioButton" alignment="CENTER_LEFT" layoutX="10.0" mnemonicParsing="false" onAction="#setToMath" prefHeight="31.0" prefWidth="179.0" text="Math">
+            <RadioButton fx:id="mathRadioButton" alignment="CENTER_LEFT" layoutX="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Math">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -47,17 +47,17 @@
                   <Insets />
                </VBox.margin>
             </RadioButton>
-            <RadioButton fx:id="digitalDesignRadioButton" mnemonicParsing="false" onAction="#setToDigitalDesign" prefHeight="31.0" prefWidth="179.0" text="Digital Design">
+            <RadioButton fx:id="digitalDesignRadioButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Digital Design">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="robotRadioButton" mnemonicParsing="false" onAction="#setToRobotics" prefHeight="31.0" prefWidth="179.0" text="Robot">
+            <RadioButton fx:id="robotRadioButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="179.0" text="Robot">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="speechRadioButton" mnemonicParsing="false" onAction="#setToSpeech" prefHeight="31.0" prefWidth="178.0" text="Speech">
+            <RadioButton fx:id="speechRadioButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="178.0" text="Speech">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

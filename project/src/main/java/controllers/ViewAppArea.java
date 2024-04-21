@@ -65,63 +65,63 @@ import msjn.*;
          this.student = student;
      }
 
-     @FXML
-     void homebuttonclicked(ActionEvent event) throws IOException {
-         App.setRoot("studentProfile");
-     }
+    //  @FXML
+    //  void homebuttonclicked(ActionEvent event) throws IOException {
+    //      App.setRoot("studentProfile");
+    //  }
 
-    @FXML
-    void buttonclicked(ActionEvent event) throws IOException {
-        System.out.println("Button clicked!");
-    }
+    // @FXML
+    // void buttonclicked(ActionEvent event) throws IOException {
+    //     System.out.println("Button clicked!");
+    // }
 
-    @FXML 
-    void setToUndeclared (ActionEvent event) {
-        if(student != null) {
-            student.setApplicationID(ApplicationID.UNDECLARED);
-        }
-    }
-
-    
-    @FXML 
-    void setToScience (ActionEvent event) {
-        if(student != null) {
-            student.setApplicationID(ApplicationID.SCIENCE);
-        }
-    }
+    // @FXML 
+    // void setToUndeclared (ActionEvent event) {
+    //     if(student != null) {
+    //         student.setApplicationID(ApplicationID.UNDECLARED);
+    //     }
+    // }
 
     
-    @FXML 
-    void setToMath (ActionEvent event) {
-        if(student != null) {
-            student.setApplicationID(ApplicationID.MATH);
-        }
-    }
+    // @FXML 
+    // void setToScience (ActionEvent event) {
+    //     if(student != null) {
+    //         student.setApplicationID(ApplicationID.SCIENCE);
+    //     }
+    // }
 
     
-    @FXML 
-    void setToDigitalDesign (ActionEvent event) {
-        if(student != null) {
-            student.setApplicationID(ApplicationID.DIGITALDESIGN);
-        }
-    }
+    // @FXML 
+    // void setToMath (ActionEvent event) {
+    //     if(student != null) {
+    //         student.setApplicationID(ApplicationID.MATH);
+    //     }
+    // }
 
     
-    @FXML 
-    void setToRobotics (ActionEvent event) {
-        if(student != null) {
-            student.setApplicationID(ApplicationID.ROBOTICS);
-        }
-    }
+    // @FXML 
+    // void setToDigitalDesign (ActionEvent event) {
+    //     if(student != null) {
+    //         student.setApplicationID(ApplicationID.DIGITALDESIGN);
+    //     }
+    // }
+
+    
+    // @FXML 
+    // void setToRobotics (ActionEvent event) {
+    //     if(student != null) {
+    //         student.setApplicationID(ApplicationID.ROBOTICS);
+    //     }
+    // }
 
 
     
-    @FXML 
-    void setToSpeech (ActionEvent event) {
-        if(student != null) {
-            student.setApplicationID(ApplicationID.SPEECH);
-        }
-    }
+    // @FXML 
+    // void setToSpeech (ActionEvent event) {
+    //     if(student != null) {
+    //         student.setApplicationID(ApplicationID.SPEECH);
+    //     }
+    // }
     @FXML
     void initialize() {
         this.toggleGroup = new ToggleGroup();
