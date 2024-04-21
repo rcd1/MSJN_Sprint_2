@@ -2,15 +2,17 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import java.net.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentProfileController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentProfileController">
    <center>
       <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="BOTTOM_CENTER">
         <columnConstraints>
@@ -28,12 +30,7 @@
          <children>
             <Button mnemonicParsing="false" onMouseClicked="#goToSemesterPlans" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Semester Plans" GridPane.halignment="CENTER" />
             <Button mnemonicParsing="false" onMouseClicked="#goToViewCourses" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Courses" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onMouseClicked="#goToViewNotes" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Notes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-            </Button>
-            <Button mnemonicParsing="false" onMouseClicked="#goToFillRequirements" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Fill Requirement" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onMouseClicked="#goToViewNotes" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Notes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
@@ -54,14 +51,37 @@
       </AnchorPane>
    </bottom>
    <top>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #377F7F;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="45.0" prefWidth="600.0" styleClass="menubar" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="WHITE" layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CourseWorks">
-               <font>
-                  <Font name="Arial Bold" size="24.0" />
-               </font>
-            </Text>
+            <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="45.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Label text="CourseWorks">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" fillHeight="false" prefHeight="45.0" spacing="5.0" AnchorPane.rightAnchor="0.0">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <children>
+                  <Button fx:id="backbutton" mnemonicParsing="false" onAction="#backbuttonclicked" text="Back">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="homebutton" mnemonicParsing="false" onAction="#homebuttonclicked" text="Home" />
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </top>
+   <stylesheets>
+   <URL value="@styles.css" />
+   </stylesheets>
 </BorderPane>
