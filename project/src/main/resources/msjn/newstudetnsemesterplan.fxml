@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewStudentSemesterPlanController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewStudentSemesterPlanController">
    <left>
       <Accordion fx:id="semesterplansaccordion" prefWidth="202.0" style="-fx-background-color: #c7c7c7;" BorderPane.alignment="CENTER" />
    </left>
@@ -77,12 +77,12 @@
                   <Insets right="5.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" text="Back">
+                  <Button mnemonicParsing="false" onMouseClicked="#goToStudentProfile" text="Back">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Home" />
+                  <Button mnemonicParsing="false" onMouseClicked="#goToStudentProfile" text="Home" />
                </children>
             </HBox>
          </children>

@@ -17,6 +17,7 @@ import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import model.*;
@@ -66,7 +67,7 @@ public class NewStudentSemesterPlanController {
     @FXML
     void initialize() throws IOException {
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
+        
 
         if(currentUser instanceof Student) {
             ArrayList<SemesterPlan> semesterPlans = ((Student)currentUser).generateEightSemesterPlan();
@@ -228,6 +229,11 @@ public class NewStudentSemesterPlanController {
                 }
             }
         });
-    }    
+    }
+
+    @FXML
+    void goToStudentProfile(MouseEvent event) throws IOException {
+        App.setRoot("studentProfile");
+    }
 
 }
