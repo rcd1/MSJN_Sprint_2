@@ -92,7 +92,7 @@ public class NewViewCoursesController {
         assert courselistview != null : "fx:id=\"courselistview\" was not injected: check your FXML file 'fillrequirementcoursesrefactor.fxml'.";
         
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
+        // currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
 
         allAvailableCourses = CourseList.getInstance().getCoursesNoFiller();
         ObservableList<Course> courseListCells = FXCollections.observableArrayList(allAvailableCourses);

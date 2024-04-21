@@ -93,7 +93,7 @@ public class FillRequirementCoursesRefactorController {
         assert selectcoursebutton != null : "fx:id=\"selectcoursebutton\" was not injected: check your FXML file 'fillrequirementcoursesrefactor.fxml'.";
 
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
+        // currentUser = DegreeFacade.getInstance().login("bwest@email.sc.edu","ma3w&zh3r3");
 
         allAvailableCourses = CourseList.getInstance().findCourses(searchKeyword.toString());
         if(currentUser != null) {

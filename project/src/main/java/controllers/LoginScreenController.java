@@ -41,7 +41,7 @@ public class LoginScreenController {
             if(user instanceof Student) {
                 App.setRoot("newstudetnsemesterplan");
             } else if(user instanceof Advisor) {
-                App.setRoot("advisorProfile");
+                App.setRoot("newAdvisorProfile");
             }
 
         }

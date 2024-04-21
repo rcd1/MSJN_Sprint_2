@@ -202,7 +202,7 @@ public class NewAdvisorProfileController {
         clearStudentDetails();
 
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        currentUser = DegreeFacade.getInstance().login("osberto@email.sc.edu","ozzie0zz13");
+        // currentUser = DegreeFacade.getInstance().login("osberto@email.sc.edu","ozzie0zz13");
 
         if(currentUser != null) {
             refreshStudentList();
