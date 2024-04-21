@@ -69,14 +69,6 @@
                <padding>
                   <Insets right="5.0" />
                </padding>
-               <children>
-                  <Button fx:id="backbutton" mnemonicParsing="false" onAction="#backbuttonclicked" text="Back" visible="false">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="homebutton" mnemonicParsing="false" onAction="#homebuttonclicked" text="Home" visible="false" />
-               </children>
             </HBox>
          </children>
       </AnchorPane>
