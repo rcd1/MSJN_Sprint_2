@@ -11,6 +11,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
@@ -81,8 +83,13 @@ public class AdvisorViewSemesterPlanController {
     }
 
     @FXML
-    void leavenoteclicked(ActionEvent event) {
-
+    void leavenoteclicked(ActionEvent event) throws IOException {
+        Dialog<ButtonType> dialog = new Dialog<ButtonType>();
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("leavenotepopup.fxml"));
+        dialog.setDialogPane(fxmlLoader.load());
+        LeaveNotePopupController controller = fxmlLoader.getController();
+        dialog.setTitle("Leave Note");
+        ButtonType clickedButton = dialog.showAndWait().get();
     }
 
     @FXML

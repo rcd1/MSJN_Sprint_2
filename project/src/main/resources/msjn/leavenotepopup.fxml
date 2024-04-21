@@ -4,7 +4,7 @@
 <?import javafx.scene.control.ButtonType?>
 <?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -19,12 +19,12 @@
    </buttonTypes>
    <content>
       <VBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" spacing="5.0">
-         <children>
-            <TextField fx:id="noteField" onKeyTyped="#keytyped" promptText="Note" />
-         </children>
          <padding>
             <Insets left="25.0" right="25.0" />
          </padding>
+         <children>
+            <TextArea fx:id="noteField" onKeyTyped="#keytyped" prefHeight="200.0" prefWidth="200.0" promptText="Note" wrapText="true" />
+         </children>
       </VBox>
    </content>
    <header>

@@ -6,7 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 public class LeaveNotePopupController {
@@ -21,7 +23,7 @@ public class LeaveNotePopupController {
     private DialogPane dialogPane;
 
     @FXML
-    private TextField noteField;
+    private TextArea noteField;
 
     private String note;
 
@@ -34,6 +36,8 @@ public class LeaveNotePopupController {
         } else {
             applyButton.setDisable(true);
         }
+        if(noteField.getText().contains("\n"))
+        noteField.setText(noteField.getText().replace("\n",""));
         note = noteField.getText();
     }
 
@@ -41,6 +45,12 @@ public class LeaveNotePopupController {
     void initialize() {
         assert dialogPane != null : "fx:id=\"dialogPane\" was not injected: check your FXML file 'leavenotepopup.fxml'.";
         assert noteField != null : "fx:id=\"noteField\" was not injected: check your FXML file 'leavenotepopup.fxml'.";
+
+        noteField.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
+            if(event.getCode() == KeyCode.ENTER) {
+                event.consume();
+            }
+        });
 
         applyButton = ((Button) dialogPane.lookupButton(ButtonType.APPLY));
         applyButton.setText("Leave Note");
