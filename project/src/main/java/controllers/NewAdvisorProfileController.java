@@ -37,13 +37,7 @@ public class NewAdvisorProfileController {
     private URL location;
 
     @FXML
-    private Button backbutton;
-
-    @FXML
     private ListView<Student> studentlistview;
-
-    @FXML
-    private Button homebutton;
 
     @FXML
     private TextField searchfield;
@@ -105,16 +99,6 @@ public class NewAdvisorProfileController {
                 refreshStudentList();
             }
         }
-    }
-
-    @FXML
-    void backbuttonclicked(ActionEvent event) {
-
-    }
-
-    @FXML
-    void homebuttonclicked(ActionEvent event) {
-
     }
 
     @FXML
@@ -186,10 +170,14 @@ public class NewAdvisorProfileController {
     }
 
     @FXML
+    void logoutbuttonclicked(ActionEvent event) throws IOException {
+        DegreeFacade.getInstance().logout();
+        App.setRoot("newwelcomescreen");
+    }
+
+    @FXML
     void initialize() {
-        assert backbutton != null : "fx:id=\"backbutton\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert studentlistview != null : "fx:id=\"courselistview\" was not injected: check your FXML file 'newviewcourses.fxml'.";
-        assert homebutton != null : "fx:id=\"homebutton\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert searchfield != null : "fx:id=\"searchfield\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert studentApplicationAreaLabel != null : "fx:id=\"studentApplicationAreaLabel\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert studentGPALabel != null : "fx:id=\"studentGPALabel\" was not injected: check your FXML file 'newviewcourses.fxml'.";
