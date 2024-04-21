@@ -216,11 +216,18 @@ public class NewStudentSemesterPlanController {
             @Override
             public void handle(ActionEvent event) {
                 if(course.getDesignator() == Designator.FILL) { //TODO handle application area on fill requirement side
-                    if(!(course.getKeywords().get(0) == Keyword.AP0 && ((Student) currentUser).getApplicationID() == ApplicationID.UNDECLARED)) {
+                    Keyword searchKeyword = course.getKeywords().get(0);
+                    if(searchKeyword == Keyword.AP0 && ((Student) currentUser).getApplicationID() != ApplicationID.UNDECLARED) {
+                        searchKeyword = Keyword.valueOf(((Student) currentUser).getApplicationID().getKeyword());
+                    }
+                    
+                    if(searchKeyword != Keyword.AP0) {
                         try {
                             FXMLLoader loader =  new FXMLLoader(msjn.App.class.getResource("fillrequirementcoursesrefactor" + ".fxml"));
                             Parent parent = (Parent)loader.load();
                             FillRequirementCoursesRefactorController controller = loader.getController();
+
+
                             controller.setSearchKeyword(course.getKeywords().get(0));
                             App.setRoot(parent);
                         } catch (IOException e) {
