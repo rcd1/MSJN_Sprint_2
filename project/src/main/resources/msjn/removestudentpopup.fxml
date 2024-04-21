@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<DialogPane fx:id="dialogPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="315.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddStudentPopupController">
+<DialogPane fx:id="dialogPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="315.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RemoveStudentPopupController">
     <expandableContent>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
     </expandableContent>
@@ -29,7 +29,7 @@
       </VBox>
    </content>
    <header>
-      <Label alignment="TOP_CENTER" text="Add Student">
+      <Label alignment="TOP_CENTER" text="Remove Student">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
