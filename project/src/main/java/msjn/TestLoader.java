@@ -16,8 +16,8 @@ public class TestLoader extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        //scene = new Scene(loadFXML("newAdvisorProfile"), 600, 450);
-        scene = new Scene(loadFXML("viewAppArea"), 600, 450);
+        scene = new Scene(loadFXML("newAdvisorProfile"), 600, 450);
+        // scene = new Scene(loadFXML("viewAppArea"), 600, 450);
         stage.setScene(scene);
         stage.show();
     }
