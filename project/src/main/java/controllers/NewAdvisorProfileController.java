@@ -3,6 +3,11 @@ package controllers;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,10 +15,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.util.Callback;
+import model.DegreeFacade;
 import msjn.*;
+import model.*;
+import java.util.ArrayList;
 
 public class NewAdvisorProfileController {
 
@@ -27,7 +37,7 @@ public class NewAdvisorProfileController {
     private Button backbutton;
 
     @FXML
-    private ListView<?> courselistview;
+    private ListView<Student> courselistview;
 
     @FXML
     private Button homebutton;
@@ -55,6 +65,10 @@ public class NewAdvisorProfileController {
 
     @FXML
     private Button viewProfileButton;
+
+    private ArrayList<Student> advisorStudents;
+
+    private User currentUser;
 
     @FXML
     void addbuttonclicked(ActionEvent event) throws IOException {
@@ -109,6 +123,48 @@ public class NewAdvisorProfileController {
         assert studentNameLabel != null : "fx:id=\"studentNameLabel\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert studentStartLabel != null : "fx:id=\"studentStartLabel\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert viewProfileButton != null : "fx:id=\"viewProfileButton\" was not injected: check your FXML file 'newviewcourses.fxml'.";
+
+        currentUser = DegreeFacade.getInstance().getCurrentUser();
+        currentUser = DegreeFacade.getInstance().login("osberto@email.sc.edu","ozzie0zz13");
+
+        if(currentUser != null) {
+            ArrayList<Student> students = ((Advisor) currentUser).getStudents();
+            ObservableList<Student> courseListCells = FXCollections.observableArrayList(students);
+            courselistview.setItems(courseListCells);
+
+            courselistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Student>() {
+
+                @Override
+                public void changed(ObservableValue<? extends Student> observable, Student oldValue, Student newValue) {
+                    if(newValue == null) {
+                        // Do stuff
+                    } else {
+                        // Do stuff
+                    }
+                }
+            });
+
+            courselistview.setCellFactory(new Callback<ListView<Student>, ListCell<Student>>() {
+            @Override
+            public ListCell<Student> call(ListView<Student> student) {
+            return new ListCell<>(){
+                @Override
+                public void updateItem(Student student, boolean empty) {
+                    super.updateItem(student, empty);
+                    if(!empty) {
+                        if(student != null) {
+                            setText(student.getFirstName() + " " + student.getLastName());
+                        }
+                    } else {
+                        setGraphic(null);
+                        setText("");
+                    }
+                
+                }
+            };
+            }
+        });
+        }
 
     }
 
