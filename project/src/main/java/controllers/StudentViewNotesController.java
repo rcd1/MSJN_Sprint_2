@@ -41,8 +41,6 @@ public class StudentViewNotesController {
     @FXML
     private ListView<Note> notelistview;
 
-    private User currentUser = null;
-
     private Student currentStudent = null;
 
     private ArrayList<Note> currentStudentNotes;
@@ -58,10 +56,8 @@ public class StudentViewNotesController {
                 : "fx:id=\"noteTitleLabel\" was not injected: check your FXML file 'studentViewNotes.fxml'.";
         assert notelistview != null
                 : "fx:id=\"notelistview\" was not injected: check your FXML file 'studentViewNotes.fxml'.";
-        currentUser = DegreeFacade.getInstance().getCurrentUser();
         currentStudent = (Student)DegreeFacade.getInstance().getCurrentUser();
         currentStudentNotes = currentStudent.getNotes();
-        System.out.println(currentStudentNotes.size());
 
         ObservableList<Note> noteListCells = FXCollections.observableArrayList(currentStudentNotes);
         notelistview.setItems(noteListCells);
