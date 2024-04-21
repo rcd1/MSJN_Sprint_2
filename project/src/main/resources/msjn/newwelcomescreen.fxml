@@ -14,12 +14,12 @@
    <center>
       <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="325.0" prefWidth="337.0" scaleShape="false" spacing="10.0" style="-fx-background-color: #FFFFFF;" styleClass="centerBox" stylesheets="@styles.css" BorderPane.alignment="BOTTOM_CENTER">
          <children>
-            <Label prefHeight="65.0" prefWidth="281.0" styleClass="accentheader" text="CourseWorks" textAlignment="CENTER" textOverrun="CLIP">
+            <Label prefHeight="65.0" prefWidth="281.0" styleClass="accentheader" stylesheets="@styles.css" text="CourseWorks" textAlignment="CENTER" textOverrun="CLIP">
                <font>
                   <Font name="System Bold" size="42.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onMouseClicked="#btnCreateAccountClicked" prefHeight="40.0" prefWidth="126.0" text="Create Account">
+            <Button mnemonicParsing="false" onMouseClicked="#btnCreateAccountClicked" prefHeight="40.0" prefWidth="126.0" stylesheets="@styles.css" text="Create Account">
                <styleClass>
                   <String fx:value="accentbutton" />
                   <String fx:value="boldbutton" />
@@ -27,12 +27,18 @@
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </Button>
             <Button mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="40.0" prefWidth="126.0" text="Log In">
                <styleClass>
                   <String fx:value="accentbutton" />
                   <String fx:value="boldbutton" />
                </styleClass>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </Button>
          </children>
          <padding>
