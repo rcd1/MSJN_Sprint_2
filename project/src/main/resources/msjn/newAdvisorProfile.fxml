@@ -84,7 +84,7 @@
           <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
-            <ListView fx:id="courselistview" style="-fx-background-color: #c7c7c7;" GridPane.rowIndex="2" />
+            <ListView fx:id="studentlistview" style="-fx-background-color: #c7c7c7;" GridPane.rowIndex="2" />
             <TextField fx:id="searchfield" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyTyped="#searchstudents" promptText="Search" GridPane.rowIndex="1" />
             <GridPane>
               <columnConstraints>

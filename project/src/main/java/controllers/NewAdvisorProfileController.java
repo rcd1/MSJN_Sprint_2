@@ -37,7 +37,7 @@ public class NewAdvisorProfileController {
     private Button backbutton;
 
     @FXML
-    private ListView<Student> courselistview;
+    private ListView<Student> studentlistview;
 
     @FXML
     private Button homebutton;
@@ -102,7 +102,19 @@ public class NewAdvisorProfileController {
 
     @FXML
     void searchstudents(KeyEvent event) {
+        ArrayList<Student> searchStudents = new ArrayList<Student>();
+        if(searchfield.getText().equals("")) {
+            searchStudents = ((Advisor) currentUser).getStudents();
+        } else {
+            for(Student student : ((Advisor) currentUser).getStudents()) {
+                if((student.getFirstName() + " " + student.getLastName()).toLowerCase().contains(searchfield.getText().toLowerCase())) {
+                    searchStudents.add(student);
+                }
+            }
+        }
 
+        ObservableList<Student> studentListCells = FXCollections.observableArrayList(searchStudents);
+        studentlistview.setItems(studentListCells);
     }
 
     @FXML
@@ -113,7 +125,7 @@ public class NewAdvisorProfileController {
     @FXML
     void initialize() {
         assert backbutton != null : "fx:id=\"backbutton\" was not injected: check your FXML file 'newviewcourses.fxml'.";
-        assert courselistview != null : "fx:id=\"courselistview\" was not injected: check your FXML file 'newviewcourses.fxml'.";
+        assert studentlistview != null : "fx:id=\"courselistview\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert homebutton != null : "fx:id=\"homebutton\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert searchfield != null : "fx:id=\"searchfield\" was not injected: check your FXML file 'newviewcourses.fxml'.";
         assert studentApplicationAreaLabel != null : "fx:id=\"studentApplicationAreaLabel\" was not injected: check your FXML file 'newviewcourses.fxml'.";
@@ -130,9 +142,9 @@ public class NewAdvisorProfileController {
         if(currentUser != null) {
             ArrayList<Student> students = ((Advisor) currentUser).getStudents();
             ObservableList<Student> courseListCells = FXCollections.observableArrayList(students);
-            courselistview.setItems(courseListCells);
+            studentlistview.setItems(courseListCells);
 
-            courselistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Student>() {
+            studentlistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Student>() {
 
                 @Override
                 public void changed(ObservableValue<? extends Student> observable, Student oldValue, Student newValue) {
@@ -144,7 +156,7 @@ public class NewAdvisorProfileController {
                 }
             });
 
-            courselistview.setCellFactory(new Callback<ListView<Student>, ListCell<Student>>() {
+            studentlistview.setCellFactory(new Callback<ListView<Student>, ListCell<Student>>() {
             @Override
             public ListCell<Student> call(ListView<Student> student) {
             return new ListCell<>(){
