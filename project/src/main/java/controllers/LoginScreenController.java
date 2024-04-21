@@ -41,7 +41,7 @@ public class LoginScreenController {
             if(user instanceof Student) {
                 App.setRoot("newstudetnsemesterplan");
             } else if(user instanceof Advisor) {
-                errorlabel.setText("Not Implemented!");
+                App.setRoot("advisorProfile");
             }
 
         }

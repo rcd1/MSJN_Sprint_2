@@ -16,9 +16,9 @@ import javafx.util.Callback;
 import model.*;
 import java.util.ArrayList;
 
-public class StudentViewNotes {
+public class StudentViewNotesController {
 
-    public static StudentViewNotes instance;
+    public static StudentViewNotesController instance = null;
 
     @FXML
     private ResourceBundle resources;
@@ -41,7 +41,7 @@ public class StudentViewNotes {
     @FXML
     private ListView<Note> notelistview;
 
-    private User currentUser;
+    private User currentUser = null;
 
     private Student currentStudent = null;
 
@@ -58,11 +58,10 @@ public class StudentViewNotes {
                 : "fx:id=\"noteTitleLabel\" was not injected: check your FXML file 'studentViewNotes.fxml'.";
         assert notelistview != null
                 : "fx:id=\"notelistview\" was not injected: check your FXML file 'studentViewNotes.fxml'.";
-
         currentUser = DegreeFacade.getInstance().getCurrentUser();
-        currentUser = DegreeFacade.getInstance().login("dbeez@email.sc.edu", "ep1c3l1t3");
-        currentStudent = (Student) currentUser;
+        currentStudent = (Student)DegreeFacade.getInstance().getCurrentUser();
         currentStudentNotes = currentStudent.getNotes();
+        System.out.println(currentStudentNotes.size());
 
         ObservableList<Note> noteListCells = FXCollections.observableArrayList(currentStudentNotes);
         notelistview.setItems(noteListCells);
@@ -72,7 +71,7 @@ public class StudentViewNotes {
             @Override
             public void changed(ObservableValue<? extends Note> observable, Note oldValue, Note newValue) {
                 if (newValue == null) {
-                    
+
                     clearNoteDetails();
                     currentNote = null;
                 } else {
@@ -101,7 +100,6 @@ public class StudentViewNotes {
                 };
             }
         });
-
     }
 
     protected void updateNotePane(Note newValue) {
@@ -115,5 +113,4 @@ public class StudentViewNotes {
         noteDateLabel.setText("To get started, select a note");
         noteText.setText("");
     }
-
 }

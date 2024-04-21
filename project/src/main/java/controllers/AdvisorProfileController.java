@@ -6,18 +6,20 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
+import model.DegreeFacade;
 import msjn.App;
 
 public class AdvisorProfileController implements Initializable{
 
     @FXML
     private void btnManageStudentsClicked(MouseEvent event) throws IOException {
-        App.setRoot("managestudents");
+        App.setRoot("advisorManageStudents");
     }
 
     @FXML
     private void btnLogoutClicked(MouseEvent event) throws IOException {
-        App.setRoot("welcome");
+        DegreeFacade.getInstance().logout();
+        App.setRoot("newwelcomescreen");
     }
 
     @Override

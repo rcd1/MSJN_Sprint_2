@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentProfileController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentProfileController">
    <center>
       <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="BOTTOM_CENTER">
         <columnConstraints>
@@ -26,20 +26,19 @@
             <Insets />
          </BorderPane.margin>
          <children>
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Semester Plan" GridPane.halignment="CENTER" />
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Courses" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Progress" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Notes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onMouseClicked="#goToSemesterPlans" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Semester Plans" GridPane.halignment="CENTER" />
+            <Button mnemonicParsing="false" onMouseClicked="#goToViewCourses" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Courses" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onMouseClicked="#goToViewNotes" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="View Notes" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Fill Requirement" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Button mnemonicParsing="false" onMouseClicked="#goToFillRequirements" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Fill Requirement" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Choose Application Area" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <Button mnemonicParsing="false" onMouseClicked="#goToApplicationArea" prefHeight="66.0" prefWidth="221.0" style="-fx-background-color: white; -fx-text-fill: black;" text="Choose Application Area" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
