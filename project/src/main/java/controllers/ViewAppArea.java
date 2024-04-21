@@ -129,4 +129,14 @@ import msjn.*;
         robotRadioButton.setToggleGroup(toggleGroup);
         speechRadioButton.setToggleGroup(toggleGroup);
     }
+
+    @FXML
+    void backButtonClicked(ActionEvent event) {
+
+    }
+
+    @FXML
+    void homeButtonClicked(ActionEvent event) {
+
+    }
 }
