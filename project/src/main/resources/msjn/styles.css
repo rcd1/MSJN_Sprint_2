@@ -43,6 +43,7 @@ somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
     -fx-text-fill: #377F7F;
     -fx-font-weight: bold;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .menubar {
@@ -62,13 +63,13 @@ somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
     -fx-font-weight: bold;
     font-weight: bold;
 }
-/* .centerBox{
+ .centerBox{
     -fx-background-size: 1200 900;
     -fx-background-radius: 30;
     -fx-border-radius: 30;
     -fx-border-width:5;
     -fx-border-color: #ffffff;
-} */
+} 
 
 .errorLabel {
     -fx-text-fill: red;
@@ -81,6 +82,7 @@ somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
     -fx-font-size: 12px;
     -fx-font-weight: bold;
 }
+
 
 
 

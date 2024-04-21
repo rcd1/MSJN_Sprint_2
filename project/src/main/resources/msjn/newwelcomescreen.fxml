@@ -19,7 +19,7 @@
                   <Font name="System Bold" size="42.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onMouseClicked="#btnCreateAccountClicked" prefHeight="40.0" prefWidth="126.0" text="Create Account">
+            <Button mnemonicParsing="false" onMouseClicked="#btnCreateAccountClicked" prefHeight="40.0" prefWidth="126.0" stylesheets="@styles.css" text="Create Account">
                <styleClass>
                   <String fx:value="accentbutton" />
                   <String fx:value="boldbutton" />
@@ -27,12 +27,18 @@
                <VBox.margin>
                   <Insets top="30.0" />
                </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </Button>
             <Button mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="40.0" prefWidth="126.0" text="Log In">
                <styleClass>
                   <String fx:value="accentbutton" />
                   <String fx:value="boldbutton" />
                </styleClass>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </Button>
          </children>
          <padding>
