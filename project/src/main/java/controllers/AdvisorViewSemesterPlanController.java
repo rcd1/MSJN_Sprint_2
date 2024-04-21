@@ -78,7 +78,8 @@ public class AdvisorViewSemesterPlanController {
     }
 
     @FXML
-    void homebuttonclicked(ActionEvent event) {
+    void homebuttonclicked(ActionEvent event) throws IOException {
+        App.setRoot("newAdvisorProfile");
 
     }
 

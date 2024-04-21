@@ -1,10 +1,12 @@
 package controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.beans.value.*;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -14,6 +16,8 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.util.Callback;
 import model.*;
+import msjn.App;
+
 import java.util.ArrayList;
 
 public class StudentViewNotesController {
@@ -108,5 +112,15 @@ public class StudentViewNotesController {
         noteTitleLabel.setText("No Note Selected");
         noteDateLabel.setText("To get started, select a note");
         noteText.setText("");
+    }
+
+    @FXML
+    void backButtonClicked(ActionEvent event) {
+
+    }
+
+    @FXML
+    void homeButtonClicked(ActionEvent event) throws IOException {
+        App.setRoot("studentProfile");
     }
 }

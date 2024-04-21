@@ -169,7 +169,8 @@ import msjn.*;
     }
 
     @FXML
-    void homeButtonClicked(ActionEvent event) {
+    void homeButtonClicked(ActionEvent event) throws IOException {
+        App.setRoot("studentProfile");
 
     }
 

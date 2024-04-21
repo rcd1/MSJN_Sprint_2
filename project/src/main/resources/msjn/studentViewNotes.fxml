@@ -38,12 +38,12 @@
                   <Insets right="5.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" text="Back">
+                  <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Home" />
+                  <Button mnemonicParsing="false" onAction="#homeButtonClicked" text="Home" />
                </children>
             </HBox>
          </children>
@@ -94,6 +94,9 @@
                </effect>
             </TextFlow>
          </children>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
       </VBox>
    </center>
 </BorderPane>
