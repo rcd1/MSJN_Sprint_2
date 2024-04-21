@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import msjn.App;
@@ -35,6 +36,7 @@ public class WelcomeController implements Initializable {
             Scene scene = new Scene(parent);
             stage.setScene(scene);
             stage.setResizable(false);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
             easterEggCounter = 5;
         }
