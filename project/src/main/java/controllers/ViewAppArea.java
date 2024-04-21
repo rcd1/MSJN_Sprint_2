@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -46,6 +47,9 @@ import msjn.*;
 
     @FXML
     private App app;
+
+    @FXML
+    private Button saveButton;
 
     private Button homebutton;
 
@@ -120,7 +124,8 @@ import msjn.*;
     }
     @FXML
     void initialize() {
-        toggleGroup = new ToggleGroup();
+        this.toggleGroup = new ToggleGroup();
+        this.student = (Student) DegreeFacade.getInstance().getCurrentUser();
         
         undeclaredRadioButton.setToggleGroup(toggleGroup);
         scienceRadioButton.setToggleGroup(toggleGroup);
@@ -128,6 +133,34 @@ import msjn.*;
         digitalDesignRadioButton.setToggleGroup(toggleGroup);
         robotRadioButton.setToggleGroup(toggleGroup);
         speechRadioButton.setToggleGroup(toggleGroup);
+
+        if(student.getApplicationID() != ApplicationID.UNDECLARED) {
+            disableButtons();
+        }
+        Toggle toggle;
+        switch(student.getApplicationID()) {
+            case UNDECLARED:
+                toggle = undeclaredRadioButton;
+                break;
+            case SCIENCE:
+                toggle = scienceRadioButton;
+                break;
+            case MATH:
+                toggle = mathRadioButton;
+                break;
+            case DIGITALDESIGN:
+                toggle = digitalDesignRadioButton;
+                break;
+            case ROBOTICS:
+                toggle = robotRadioButton;
+                break;
+            case SPEECH:
+                toggle = speechRadioButton;
+                break;
+            default:
+                toggle = null;
+        }
+        toggleGroup.selectToggle(toggle);
     }
 
     @FXML
@@ -138,5 +171,37 @@ import msjn.*;
     @FXML
     void homeButtonClicked(ActionEvent event) {
 
+    }
+
+    @FXML
+    void saveButtonClicked(ActionEvent event) {
+        Toggle toggle = toggleGroup.getSelectedToggle();
+
+        if(toggle == undeclaredRadioButton) {
+            return;
+        } else if (toggle == scienceRadioButton) {
+            student.setApplicationID(ApplicationID.SCIENCE);
+        } else if (toggle == mathRadioButton) {
+            student.setApplicationID(ApplicationID.MATH);
+        } else if (toggle == digitalDesignRadioButton) {
+            student.setApplicationID(ApplicationID.DIGITALDESIGN);
+        } else if (toggle == robotRadioButton) {
+            student.setApplicationID(ApplicationID.ROBOTICS);
+        } else if (toggle == speechRadioButton) {
+            student.setApplicationID(ApplicationID.SPEECH);
+        }
+        disableButtons();
+        
+
+    }
+
+    void disableButtons() {
+        undeclaredRadioButton.setDisable(true);
+        scienceRadioButton.setDisable(true);
+        mathRadioButton.setDisable(true);
+        digitalDesignRadioButton.setDisable(true);
+        robotRadioButton.setDisable(true); 
+        speechRadioButton.setDisable(true);
+        saveButton.setDisable(true);      
     }
 }

@@ -85,12 +85,13 @@
                   <Insets right="5.0" />
                </padding>
                <children>
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" />
                   <Button mnemonicParsing="false" onAction="#backButtonClicked" text="Back">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#homeButtonClicked" text="Home" />
+                  <Button fx:id="homebutton" mnemonicParsing="false" onAction="#homeButtonClicked" text="Home" />
                </children>
             </HBox>
          </children>
