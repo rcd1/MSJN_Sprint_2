@@ -252,7 +252,7 @@ public class NewAdvisorProfileController {
         studentNameLabel.setText(student.getFirstName() + " " + student.getLastName());
         studentMajorLabel.setText("Major: " + student.getMajor().getMajorName());
         studentApplicationAreaLabel.setText("Application Area: " + student.getApplicationID().getName());
-        studentStartLabel.setText("Start: TBA");
+        studentStartLabel.setText("Start: Fall " + (student.getYear()));
         studentGPALabel.setText("GPA: " + student.getGpa());
 
         String honors = student.getHonors() ? "Yes" : "No";
