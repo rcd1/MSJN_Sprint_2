@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -10,7 +11,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-<?import java.net.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentProfileController">
    <center>
@@ -70,12 +70,12 @@
                   <Insets right="5.0" />
                </padding>
                <children>
-                  <Button fx:id="backbutton" mnemonicParsing="false" onAction="#backbuttonclicked" text="Back">
+                  <Button fx:id="backbutton" mnemonicParsing="false" onAction="#backbuttonclicked" text="Back" visible="false">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="homebutton" mnemonicParsing="false" onAction="#homebuttonclicked" text="Home" />
+                  <Button fx:id="homebutton" mnemonicParsing="false" onAction="#homebuttonclicked" text="Home" visible="false" />
                </children>
             </HBox>
          </children>
