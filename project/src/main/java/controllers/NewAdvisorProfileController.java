@@ -11,6 +11,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
@@ -77,7 +79,31 @@ public class NewAdvisorProfileController {
         dialog.setDialogPane(fxmlLoader.load());
         AddStudentPopupController controller = fxmlLoader.getController();
         dialog.setTitle("Add Student");
-        dialog.showAndWait().get();
+        ButtonType clickedButton = dialog.showAndWait().get();
+
+        if(clickedButton == ButtonType.APPLY) {
+            String firstName = controller.getFirstName().toLowerCase();
+            String lastName = controller.getLastName().toLowerCase();
+
+            Student student = UserList.getInstance().findStudentByName(firstName, lastName);
+
+            if(student == null) {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setHeaderText("Student not found");
+                alert.setTitle("Student not found");
+                alert.setContentText("Please check your spelling and try again");
+                alert.showAndWait();
+            } else if (((Advisor) currentUser).getStudents().contains(student)) {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setHeaderText("Student already exists in your list");
+                alert.setContentText("Please make sure the student you want to add is not already in your list");
+                alert.setTitle("Student already exists");
+                alert.showAndWait();
+            } else {
+                ((Advisor) currentUser).getStudents().add(student);
+                refreshStudentList();
+            }
+        }
     }
 
     @FXML
@@ -97,7 +123,32 @@ public class NewAdvisorProfileController {
         dialog.setDialogPane(fxmlLoader.load());
         RemoveStudentPopupController controller = fxmlLoader.getController();
         dialog.setTitle("Remove Student");
-        dialog.showAndWait().get();
+        ButtonType clickedButton = dialog.showAndWait().get();
+
+        if(clickedButton == ButtonType.APPLY) {
+            String firstName = controller.getFirstName().toLowerCase();
+            String lastName = controller.getLastName().toLowerCase();
+
+            Student student = UserList.getInstance().findStudentByName(firstName, lastName);
+
+            if(student == null) {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setHeaderText("Student not found");
+                alert.setTitle("Student not found");
+                alert.setContentText("Please check your spelling and try again");
+                alert.showAndWait();
+            } else if (((Advisor) currentUser).getStudents().contains(student)) {
+                ((Advisor) currentUser).getStudents().remove(student);
+                refreshStudentList();
+            } else {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setHeaderText("Student found, but does not exist in your list");
+                alert.setContentText("Please make sure the student you want to remove is in your list");
+                alert.setTitle("Student does not exist");
+                alert.showAndWait();
+            }
+                
+        }
     }
 
     @FXML
@@ -142,9 +193,7 @@ public class NewAdvisorProfileController {
         currentUser = DegreeFacade.getInstance().login("osberto@email.sc.edu","ozzie0zz13");
 
         if(currentUser != null) {
-            ArrayList<Student> students = ((Advisor) currentUser).getStudents();
-            ObservableList<Student> courseListCells = FXCollections.observableArrayList(students);
-            studentlistview.setItems(courseListCells);
+            refreshStudentList();
 
             studentlistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Student>() {
 
@@ -190,6 +239,13 @@ public class NewAdvisorProfileController {
         studentGPALabel.setText("");
         studentHonorsLabel.setText("");
         viewProfileButton.setVisible(false);
+    }
+
+    private void refreshStudentList() {
+        if(currentUser != null) {
+            ObservableList<Student> students = FXCollections.observableArrayList(((Advisor) currentUser).getStudents());
+            studentlistview.setItems(students);
+        }
     }
 
     private void updateStudentPane(Student student) {
