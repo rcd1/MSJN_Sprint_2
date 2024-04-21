@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import model.ApplicationID;
@@ -49,6 +50,8 @@ import msjn.*;
     private Button homebutton;
 
     private Student student;
+
+    private ToggleGroup toggleGroup;
 
     public void setApp(App app) {
         this.app = app;
@@ -117,6 +120,13 @@ import msjn.*;
     }
     @FXML
     void initialize() {
-
+        toggleGroup = new ToggleGroup();
+        
+        undeclaredRadioButton.setToggleGroup(toggleGroup);
+        scienceRadioButton.setToggleGroup(toggleGroup);
+        mathRadioButton.setToggleGroup(toggleGroup);
+        digitalDesignRadioButton.setToggleGroup(toggleGroup);
+        robotRadioButton.setToggleGroup(toggleGroup);
+        speechRadioButton.setToggleGroup(toggleGroup);
     }
 }
