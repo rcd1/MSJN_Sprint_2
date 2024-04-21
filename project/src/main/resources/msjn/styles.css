@@ -64,11 +64,11 @@ somewhere in the VBox/HBox/GridPane/AnchorPane/etc. tags
     font-weight: bold;
 }
  .centerBox{
-    -fx-background-size: 1200 900;
-    -fx-background-radius: 30;
-    -fx-border-radius: 30;
-    -fx-border-width:5;
-    -fx-border-color: #ffffff;
+    /* -fx-background-size: 1200 900; */
+    -fx-background-radius: 15 15 0 0;
+    -fx-border-radius: 15 15 0 0;
+    /* -fx-border-width:5; */
+    /* -fx-border-color: #ffffff; */
 } 
 
 .errorLabel {
