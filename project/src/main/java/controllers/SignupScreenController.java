@@ -85,4 +85,10 @@ public class SignupScreenController {
         usertypebox.setItems(FXCollections.observableArrayList(UserType.values()));
     }
 
+    @FXML
+    void backbuttonclicked(MouseEvent event) throws IOException {
+        App.setRoot("newwelcomescreen");
+    }
+
+
 }

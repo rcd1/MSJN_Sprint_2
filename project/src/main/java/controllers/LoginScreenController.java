@@ -54,4 +54,9 @@ public class LoginScreenController {
 
     }
 
+    @FXML
+    void backButtonClicked(MouseEvent event) throws IOException {
+        App.setRoot("newwelcomescreen");
+    }
+
 }
