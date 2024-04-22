@@ -43,7 +43,7 @@ public class StudentProfileController {
 
     @FXML
     public void logout() throws IOException {
-        DegreeFacade.getInstance().logout();
+        App.logout();
         App.setRoot("newwelcomescreen");
     }
 

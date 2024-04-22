@@ -171,7 +171,7 @@ public class NewAdvisorProfileController {
 
     @FXML
     void logoutbuttonclicked(ActionEvent event) throws IOException {
-        DegreeFacade.getInstance().logout();
+        App.logout();
         App.setRoot("newwelcomescreen");
     }
 
