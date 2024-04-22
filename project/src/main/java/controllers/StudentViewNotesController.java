@@ -63,43 +63,49 @@ public class StudentViewNotesController {
         currentStudent = (Student)DegreeFacade.getInstance().getCurrentUser();
         currentStudentNotes = currentStudent.getNotes();
 
-        ObservableList<Note> noteListCells = FXCollections.observableArrayList(currentStudentNotes);
-        notelistview.setItems(noteListCells);
+        if(!currentStudent.getNotes().isEmpty()) {
+            ObservableList<Note> noteListCells = FXCollections.observableArrayList(currentStudentNotes);
+            notelistview.setItems(noteListCells);
 
-        notelistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Note>() {
+            notelistview.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Note>() {
 
-            @Override
-            public void changed(ObservableValue<? extends Note> observable, Note oldValue, Note newValue) {
-                if (newValue == null) {
+                @Override
+                public void changed(ObservableValue<? extends Note> observable, Note oldValue, Note newValue) {
+                    if (newValue == null) {
 
-                    clearNoteDetails();
-                    currentNote = null;
-                } else {
-                    updateNotePane(newValue);
-                    currentNote = newValue;
-                }
-            }
-        });
-
-        notelistview.setCellFactory(new Callback<ListView<Note>, ListCell<Note>>() {
-            @Override
-            public ListCell<Note> call(ListView<Note> note) {
-                return new ListCell<>() {
-                    @Override
-                    public void updateItem(Note note, boolean empty) {
-                        super.updateItem(note, empty);
-                        if (!empty) {
-                            if (note != null) {
-                                setText(note.getTitle());
-                            }
-                        } else {
-                            setGraphic(null);
-                            setText("");
-                        }
+                        clearNoteDetails();
+                        currentNote = null;
+                    } else {
+                        updateNotePane(newValue);
+                        currentNote = newValue;
                     }
-                };
-            }
-        });
+                }
+            });
+
+            notelistview.setCellFactory(new Callback<ListView<Note>, ListCell<Note>>() {
+                @Override
+                public ListCell<Note> call(ListView<Note> note) {
+                    return new ListCell<>() {
+                        @Override
+                        public void updateItem(Note note, boolean empty) {
+                            super.updateItem(note, empty);
+                            if (!empty) {
+                                if (note != null) {
+                                    setText(note.getTitle());
+                                }
+                            } else {
+                                setGraphic(null);
+                                setText("");
+                            }
+                        }
+                    };
+                }
+            });
+        } else {
+            setNoAvailableNotes();
+        }
+
+        
     }
 
     protected void updateNotePane(Note newValue) {
@@ -122,5 +128,10 @@ public class StudentViewNotesController {
     @FXML
     void homeButtonClicked(ActionEvent event) throws IOException {
         App.setRoot("studentProfile");
+    }
+
+    void setNoAvailableNotes() {
+        noteTitleLabel.setText("No Available Notes");
+        noteDateLabel.setText("Please contact your advisor");
     }
 }
