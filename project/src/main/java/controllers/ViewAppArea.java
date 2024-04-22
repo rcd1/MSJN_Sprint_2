@@ -164,8 +164,8 @@ import msjn.*;
     }
 
     @FXML
-    void backButtonClicked(ActionEvent event) {
-
+    void backButtonClicked(ActionEvent event) throws IOException {
+        App.setRoot("studentProfile");
     }
 
     @FXML
