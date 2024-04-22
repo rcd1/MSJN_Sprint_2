@@ -249,7 +249,7 @@ public class NewViewCoursesController {
 
     @FXML
     void backbuttonclicked(ActionEvent event) {
-
+        App.setRoot("studentProfile");
     }
 
     @FXML

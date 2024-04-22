@@ -122,7 +122,7 @@ public class StudentViewNotesController {
 
     @FXML
     void backButtonClicked(ActionEvent event) {
-
+        App.setRoot("studentProfile");
     }
 
     @FXML
