@@ -248,7 +248,7 @@ public class NewViewCoursesController {
     }
 
     @FXML
-    void backbuttonclicked(ActionEvent event) {
+    void backbuttonclicked(ActionEvent event) throws IOException {
         App.setRoot("studentProfile");
     }
 
